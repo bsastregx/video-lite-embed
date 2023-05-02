@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Learn more</title>
+    <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="../node_modules/lit/polyfill-support.js"></script>
+    <script
+      type="module"
+      src="../components/learn-more/gwds-learn-more.js"
+    ></script>
+    <script
+      type="module"
+      src="../components/component-title/gwds-component-title.js"
+    ></script>
+    <link rel="stylesheet" href="../src/styles/styles.css" />
+    <style></style>
+  </head>
+  <body>
+    <gwds-component-title label="gwds-learn-more properties" props>
+      bgcolor: string = 'white'; <br />
+      iconsrc: string | undefined = undefined; <br />
+      iconsize: 's' | 'm' | 'l' = 'm'; <br />
+      pretitle: string | undefined = undefined; <br />
+      maintitle: string | undefined = undefined; <br />
+      description: string | undefined = undefined; <br />
+      pt0: boolean = false; //padding-top:0 <br />
+      pb0: boolean = false; //padding-bottom:0 <br />
+      firstbuttonlabel: string | undefined = undefined; <br />
+      firstbuttonurl: string | undefined = undefined; <br />
+      firstbuttontype: 'primary' | 'secondary' | 'tertiary' = 'primary'; <br />
+      firstbuttontarget: '_blank' | '_self' = '_self'; <br />
+      secondbuttonlabel: string | undefined = undefined; <br />
+      secondbuttonurl: string | undefined = undefined; <br />
+      secondbuttontype: 'primary' | 'secondary' | 'tertiary' = 'secondary';<br />
+      secondbuttontarget: '_blank' | '_self' = '_self'; <br />
+      thirdbuttonlabel: string | undefined = undefined; <br />
+      thirdbuttonurl: string | undefined = undefined; <br />
+      thirdbuttontype: 'primary' | 'secondary' | 'tertiary' = 'tertiary'; <br />
+      thirdbuttontarget: '_blank' | '_self' = '_self'; <br />
+      slot="description" -> description as slotted content
+    </gwds-component-title>
+    <!-- light background -->
+    <gwds-learn-more
+      iconsrc="./assets/images/other/dummy-icon.png"
+      pretitle="Pre-title"
+      maintitle="Meet Our Academic Program Partner"
+      firstbuttonlabel="Buy GeneXus"
+      firstbuttonurl="http://www.google.com"
+      thirdbuttonlabel="Get a Refund"
+      thirdbuttonurl="http://www.google.com"
+    ></gwds-learn-more>
+
+    <!-- dark background -->
+    <gwds-learn-more
+      iconsrc="./assets/images/other/dummy-icon.png"
+      pretitle="Pre-title"
+      maintitle="Meet Our Academic Program Partner"
+      bgcolor="dark-900"
+      firstbuttonlabel="Buy GeneXus"
+      firstbuttonurl="http://www.google.com"
+      secondbuttonlabel="Contact Sales"
+      secondbuttonurl="http://www.google.com"
+      thirdbuttonlabel="Get a Refund"
+      thirdbuttonurl="http://www.google.com"
+    >
+      <p slot="description">
+        With the new version, **GeneXus 18**, it is possible to create new and
+        colossal digital ecosystems, integrate with these in an outsourced way
+        to speed up your solution and build Scalable Mission Critical
+        Applications in a safe, fast and automatic way.
+      </p>
+      <p slot="description">
+        With the new version, **GeneXus 18**, it is possible to create new and
+        colossal digital ecosystems, integrate with these in an outsourced way
+        to speed up your solution and build Scalable Mission Critical
+        Applications in a safe, fast and automatic way.
+      </p>
+    </gwds-learn-more>
+
+    <gwds-component-title
+      label="Built with Lit"
+      imgsrc="./assets/images/logos/lit.svg"
+      center
+      noarrow
+    ></gwds-component-title>
+
+    <script>
+      const description =
+        "With the new version, **GeneXus 18**, it is possible to create new and colossal digital ecosystems, integrate with these in an outsourced way to speed up your solution and build Scalable Mission Critical Applications in a safe, fast and automatic way.  ";
+      const learnMore = document.querySelector("gwds-learn-more");
+      learnMore.setAttribute("description", description);
+    </script>
+  </body>
+</html>

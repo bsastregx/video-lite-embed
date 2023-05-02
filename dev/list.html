@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>List</title>
+    <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="../node_modules/lit/polyfill-support.js"></script>
+    <link rel="stylesheet" href="../src/styles/styles.css" />
+    <script type="module" src="../components/list/gwds-list.js"></script>
+    <script
+      type="module"
+      src="../components/component-title/gwds-component-title.js"
+    ></script>
+  </head>
+  <body>
+    <gwds-component-title label="gwds-list properties" props>
+      bgcolor: string = 'white'; <br />
+      iconsrc: string | undefined = undefined; <br />
+      iconsize: 's' | 'm' | 'l' = 'm'; <br />
+      pretitle: string | undefined = undefined; <br />
+      maintitle: string | undefined = undefined; <br />
+      description: string | undefined = undefined; <br />
+      pt0: boolean = false; //padding-top:0 <br />
+      pb0: boolean = false; //padding-bottom:0 <br />
+      firstbuttonlabel: string | undefined = undefined; <br />
+      firstbuttonurl: string | undefined = undefined; <br />
+      firstbuttontype: 'primary' | 'secondary' | 'tertiary' = 'primary'; <br />
+      firstbuttontarget: '_blank' | '_self' = '_self'; <br />
+      secondbuttonlabel: string | undefined = undefined; <br />
+      secondbuttonurl: string | undefined = undefined; <br />
+      secondbuttontype: 'primary' | 'secondary' | 'tertiary' = 'secondary';<br />
+      secondbuttontarget: '_blank' | '_self' = '_self'; <br />
+      thirdbuttonlabel: string | undefined = undefined; <br />
+      thirdbuttonurl: string | undefined = undefined; <br />
+      thirdbuttontype: 'primary' | 'secondary' | 'tertiary' = 'tertiary'; <br />
+      thirdbuttontarget: '_blank' | '_self' = '_self'; <br />
+      linklabel: string | undefined = undefined; <br />
+      linkurl: string | undefined = undefined; <br />
+      linktarget: '_blank' | '_self' = '_self'; <br />
+      slot -> gwds-card(s) <br />
+      slot="description" -> description as slotted content
+    </gwds-component-title>
+    <gwds-component-title label="gwds-list-item properties" props>
+      itemtitle: string | undefined = undefined; <br />
+      description: string | undefined = undefined; <br />
+      imgsrc: string | undefined = undefined; <br />
+      imgalt: string | undefined = undefined; <br />
+      slot="description" -> description as slotted content
+    </gwds-component-title>
+
+    <!-- light background -->
+    <gwds-list
+      iconsrc="./assets/images/other/dummy-icon.png"
+      pretitle="Pre-title"
+      maintitle="Meet Our Academic Program Partner"
+      firstbuttonlabel="Primary Button"
+      firstbuttonurl="/label"
+      firstbuttontype="primary"
+      thirdbuttonlabel="Teritary Button"
+      thirdbuttonurl="/label"
+      thirdbuttontype="tertiary"
+      linklabel="More"
+      linkurl="www.google.com"
+    >
+      <gwds-list-item
+        itemtitle="Sub-title"
+        imgsrc="./assets/images/other/dummy-icon.png"
+        imgalt="dummy icon"
+      ></gwds-list-item>
+      <gwds-list-item
+        itemtitle="Sub-title"
+        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus nemo ab quaerat. Veritatis pariatur ab cum animi saepe esse, ipsam necessitatibus dolor ducimus iusto voluptatem sunt! Culpa labore doloribus aperiam?"
+        imgsrc="./assets/images/other/dummy-icon.png"
+        imgalt="dummy icon"
+      ></gwds-list-item>
+      <gwds-list-item
+        itemtitle="Sub-title"
+        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus nemo ab quaerat. Veritatis pariatur ab cum animi saepe esse, ipsam necessitatibus dolor ducimus iusto voluptatem sunt! Culpa labore doloribus aperiam?"
+        imgsrc="./assets/images/other/dummy-icon.png"
+        imgalt="dummy icon"
+      ></gwds-list-item>
+      <gwds-list-item
+        itemtitle="Sub-title"
+        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus nemo ab quaerat. Veritatis pariatur ab cum animi saepe esse, ipsam necessitatibus dolor ducimus iusto voluptatem sunt! Culpa labore doloribus aperiam?"
+        imgsrc="./assets/images/other/dummy-icon.png"
+        imgalt="dummy icon"
+      ></gwds-list-item>
+      <gwds-list-item
+        itemtitle="Sub-title"
+        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus nemo ab quaerat. Veritatis pariatur ab cum animi saepe esse, ipsam necessitatibus dolor ducimus iusto voluptatem sunt! Culpa labore doloribus aperiam?"
+        imgsrc="./assets/images/other/dummy-icon.png"
+        imgalt="dummy icon"
+      ></gwds-list-item>
+      <gwds-list-item
+        itemtitle="Sub-title"
+        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus nemo ab quaerat. Veritatis pariatur ab cum animi saepe esse, ipsam necessitatibus dolor ducimus iusto voluptatem sunt! Culpa labore doloribus aperiam?"
+        imgsrc="./assets/images/other/dummy-icon.png"
+        imgalt="dummy icon"
+      ></gwds-list-item>
+    </gwds-list>
+
+    <!-- dark background -->
+    <gwds-list
+      iconsrc="./assets/images/other/dummy-icon.png"
+      pretitle="Pre-title"
+      maintitle="Meet Our Academic Program Partner"
+      firstbuttonlabel="Primary Button"
+      firstbuttonurl="/label"
+      firstbuttontype="primary"
+      secondbuttonlabel="Secondary Button"
+      secondbuttonurl="/label"
+      secondbuttontype="secondary"
+      thirdbuttonlabel="Teritary Button"
+      thirdbuttonurl="/label"
+      thirdbuttontype="tertiary"
+      linklabel="More"
+      linkurl="www.google.com"
+      bgcolor="dark-900"
+    >
+      <p slot="description">
+        With the new version, **GeneXus 18**, it is possible to create new and
+        colossal digital ecosystems, integrate with these in an outsourced way
+        to speed up your solution and build Scalable Mission Critical
+        Applications in a safe, fast and automatic way.
+      </p>
+      <gwds-list-item
+        itemtitle="Sub-title"
+        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus nemo ab quaerat. Veritatis pariatur ab cum animi saepe esse, ipsam necessitatibus dolor ducimus iusto voluptatem sunt! Culpa labore doloribus aperiam?"
+        imgsrc="./assets/images/other/dummy-icon.png"
+        imgalt="dummy icon"
+      ></gwds-list-item>
+      <gwds-list-item
+        itemtitle="Sub-title"
+        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus nemo ab quaerat. Veritatis pariatur ab cum animi saepe esse, ipsam necessitatibus dolor ducimus iusto voluptatem sunt! Culpa labore doloribus aperiam?"
+        imgsrc="./assets/images/other/dummy-icon.png"
+        imgalt="dummy icon"
+      ></gwds-list-item>
+      <gwds-list-item
+        itemtitle="Sub-title"
+        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus nemo ab quaerat. Veritatis pariatur ab cum animi saepe esse, ipsam necessitatibus dolor ducimus iusto voluptatem sunt! Culpa labore doloribus aperiam?"
+        imgsrc="./assets/images/other/dummy-icon.png"
+        imgalt="dummy icon"
+      ></gwds-list-item>
+      <gwds-list-item
+        itemtitle="Sub-title"
+        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus nemo ab quaerat. Veritatis pariatur ab cum animi saepe esse, ipsam necessitatibus dolor ducimus iusto voluptatem sunt! Culpa labore doloribus aperiam?"
+        imgsrc="./assets/images/other/dummy-icon.png"
+        imgalt="dummy icon"
+      ></gwds-list-item>
+      <gwds-list-item
+        itemtitle="Sub-title"
+        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus nemo ab quaerat. Veritatis pariatur ab cum animi saepe esse, ipsam necessitatibus dolor ducimus iusto voluptatem sunt! Culpa labore doloribus aperiam?"
+        imgsrc="./assets/images/other/dummy-icon.png"
+        imgalt="dummy icon"
+      ></gwds-list-item>
+      <gwds-list-item
+        itemtitle="Sub-title"
+        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus nemo ab quaerat. Veritatis pariatur ab cum animi saepe esse, ipsam necessitatibus dolor ducimus iusto voluptatem sunt! Culpa labore doloribus aperiam?"
+        imgsrc="./assets/images/other/dummy-icon.png"
+        imgalt="dummy icon"
+      ></gwds-list-item>
+    </gwds-list>
+
+    <gwds-component-title
+      label="Built with Lit"
+      imgsrc="./assets/images/logos/lit.svg"
+      center
+      noarrow
+    ></gwds-component-title>
+    <script>
+      const description =
+        "With the new version, **GeneXus 18**, it is possible to create new and colossal digital ecosystems, integrate with these in an outsourced way to speed up your solution and build Scalable Mission Critical Applications in a safe, fast and automatic way.";
+      const list = document.querySelector("gwds-list");
+      list.setAttribute("description", description);
+      const listItem = document.querySelector("gwds-list-item");
+      listItem.setAttribute("description", description);
+    </script>
+  </body>
+</html>

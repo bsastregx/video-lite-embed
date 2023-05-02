@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Slider</title>
+    <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="../node_modules/lit/polyfill-support.js"></script>
+    <script type="module" src="../components/slider/gwds-slider.js"></script>
+    <script
+      type="module"
+      src="../components/component-title/gwds-component-title.js"
+    ></script>
+    <link rel="stylesheet" href="../src/styles/styles.css" />
+    <style></style>
+  </head>
+  <body>
+    <gwds-component-title label="gwds-slider properties" props>
+      bgcolor: string = 'white'; <br />
+      pretitle: string | undefined = undefined; <br />
+      maintitle: string | undefined = undefined; <br />
+      description: string | undefined = undefined; <br />
+      pt0: boolean = false; //padding-top:0 <br />
+      pb0: boolean = false; //padding-bottom:0 <br />
+      largedesktop: number = 4; //number of slides <br />
+      smalldesktop: number = 3; //number of slides <br />
+      tablet: number = 2; //number of slides <br />
+      mobile: number = 1; //number of slides <br />
+      cover: boolean = false; <br />
+      gap: boolean = false; <br />
+      padding: boolean = false; <br />
+      disablearrows: boolean = false; <br />
+      disablepagination: boolean = false; <br />
+      firstbuttonlabel: string | undefined = undefined; <br />
+      firstbuttonurl: string | undefined = undefined; <br />
+      firstbuttontype: 'primary' | 'secondary' | 'tertiary' = 'primary'; <br />
+      firstbuttontarget: '_blank' | '_self' = '_self'; <br />
+      secondbuttonlabel: string | undefined = undefined; <br />
+      secondbuttonurl: string | undefined = undefined; <br />
+      secondbuttontype: 'primary' | 'secondary' | 'tertiary' = 'secondary';<br />
+      secondbuttontarget: '_blank' | '_self' = '_self'; <br />
+      thirdbuttonlabel: string | undefined = undefined; <br />
+      thirdbuttonurl: string | undefined = undefined; <br />
+      thirdbuttontype: 'primary' | 'secondary' | 'tertiary' = 'tertiary'; <br />
+      thirdbuttontarget: '_blank' | '_self' = '_self'; <br />
+      slot -> gwds-slide(s) <br />
+      slot="description" -> description as slotted content
+    </gwds-component-title>
+    <gwds-component-title label="gwds-slide properties" props>
+      none
+    </gwds-component-title>
+
+    <!-- slider default -->
+    <gwds-component-title label="gwds-slider (default)"></gwds-component-title>
+    <gwds-slider pb0 pt0>
+      <gwds-slide>
+        <img src="./assets/images/paisajes/paisaje-01.jpg" alt="paisaje 01" />
+      </gwds-slide>
+      <gwds-slide>
+        <img src="./assets/images/paisajes/paisaje-02.jpg" alt="paisaje 02" />
+      </gwds-slide>
+      <gwds-slide>
+        <img src="./assets/images/paisajes/paisaje-03.jpg" alt="paisaje 03" />
+      </gwds-slide>
+      <gwds-slide>
+        <img src="./assets/images/paisajes/paisaje-04.jpg" alt="paisaje 04" />
+      </gwds-slide>
+      <gwds-slide>
+        <img src="./assets/images/paisajes/paisaje-05.jpg" alt="paisaje 05" />
+      </gwds-slide>
+      <gwds-slide>
+        <img src="./assets/images/paisajes/paisaje-06.jpg" alt="paisaje 06" />
+      </gwds-slide>
+    </gwds-slider>
+
+    <!-- slider cover -->
+    <gwds-component-title label="gwds-slider (cover)"></gwds-component-title>
+    <gwds-slider pb0 pt0 cover>
+      <gwds-slide>
+        <img src="./assets/images/paisajes/paisaje-01.jpg" alt="paisaje 01" />
+      </gwds-slide>
+      <gwds-slide>
+        <img src="./assets/images/paisajes/paisaje-02.jpg" alt="paisaje 02" />
+      </gwds-slide>
+      <gwds-slide>
+        <img src="./assets/images/paisajes/paisaje-03.jpg" alt="paisaje 03" />
+      </gwds-slide>
+      <gwds-slide>
+        <img src="./assets/images/paisajes/paisaje-04.jpg" alt="paisaje 04" />
+      </gwds-slide>
+      <gwds-slide>
+        <img src="./assets/images/paisajes/paisaje-05.jpg" alt="paisaje 05" />
+      </gwds-slide>
+      <gwds-slide>
+        <img src="./assets/images/paisajes/paisaje-06.jpg" alt="paisaje 06" />
+      </gwds-slide>
+    </gwds-slider>
+
+    <!-- slider cover + gap -->
+    <gwds-component-title
+      label="gwds-slider (cover + gap)"
+    ></gwds-component-title>
+    <gwds-slider pb0 pt0 cover gap>
+      <gwds-slide>
+        <img src="./assets/images/paisajes/paisaje-01.jpg" alt="paisaje 01" />
+      </gwds-slide>
+      <gwds-slide>
+        <img src="./assets/images/paisajes/paisaje-02.jpg" alt="paisaje 02" />
+      </gwds-slide>
+      <gwds-slide>
+        <img src="./assets/images/paisajes/paisaje-03.jpg" alt="paisaje 03" />
+      </gwds-slide>
+      <gwds-slide>
+        <img src="./assets/images/paisajes/paisaje-04.jpg" alt="paisaje 04" />
+      </gwds-slide>
+      <gwds-slide>
+        <img src="./assets/images/paisajes/paisaje-05.jpg" alt="paisaje 05" />
+      </gwds-slide>
+      <gwds-slide>
+        <img src="./assets/images/paisajes/paisaje-06.jpg" alt="paisaje 06" />
+      </gwds-slide>
+    </gwds-slider>
+
+    <!-- slider cover + gap + padding -->
+    <gwds-component-title
+      label="gwds-slider (cover + gap + padding)"
+    ></gwds-component-title>
+    <gwds-slider pb0 pt0 cover gap padding>
+      <gwds-slide>
+        <img src="./assets/images/paisajes/paisaje-01.jpg" alt="paisaje 01" />
+      </gwds-slide>
+      <gwds-slide>
+        <img src="./assets/images/paisajes/paisaje-02.jpg" alt="paisaje 02" />
+      </gwds-slide>
+      <gwds-slide>
+        <img src="./assets/images/paisajes/paisaje-03.jpg" alt="paisaje 03" />
+      </gwds-slide>
+      <gwds-slide>
+        <img src="./assets/images/paisajes/paisaje-04.jpg" alt="paisaje 04" />
+      </gwds-slide>
+      <gwds-slide>
+        <img src="./assets/images/paisajes/paisaje-05.jpg" alt="paisaje 05" />
+      </gwds-slide>
+      <gwds-slide>
+        <img src="./assets/images/paisajes/paisaje-06.jpg" alt="paisaje 06" />
+      </gwds-slide>
+    </gwds-slider>
+
+    <!-- slider with information -->
+    <gwds-component-title
+      label="gwds-slider (with information)"
+    ></gwds-component-title>
+    <gwds-slider
+      pretitle="Pre-title"
+      maintitle="Meet Our Academic Program Partner"
+      firstbuttonlabel="Primary Button"
+      firstbuttonurl="/label"
+      firstbuttontype="primary"
+      thirdbuttonlabel="Teritary Button"
+      thirdbuttonurl="/label"
+      thirdbuttontype="tertiary"
+      sliderid="default"
+      cover
+      pb0
+    >
+      <p slot="description">
+        With the new version, **GeneXus 18**, it is possible to create new and
+        colossal digital ecosystems, integrate with these in an outsourced way
+        to speed up your solution and build Scalable Mission Critical
+        Applications in a safe, fast and automatic way.
+      </p>
+
+      <gwds-slide>
+        <img src="./assets/images/paisajes/paisaje-01.jpg" alt="paisaje 01" />
+      </gwds-slide>
+      <gwds-slide>
+        <img src="./assets/images/paisajes/paisaje-02.jpg" alt="paisaje 02" />
+      </gwds-slide>
+      <gwds-slide>
+        <img src="./assets/images/paisajes/paisaje-03.jpg" alt="paisaje 03" />
+      </gwds-slide>
+      <gwds-slide>
+        <img src="./assets/images/paisajes/paisaje-04.jpg" alt="paisaje 04" />
+      </gwds-slide>
+      <gwds-slide>
+        <img src="./assets/images/paisajes/paisaje-05.jpg" alt="paisaje 05" />
+      </gwds-slide>
+      <gwds-slide>
+        <img src="./assets/images/paisajes/paisaje-06.jpg" alt="paisaje 06" />
+      </gwds-slide>
+    </gwds-slider>
+
+    <gwds-component-title
+      label="Built with Lit"
+      imgsrc="./assets/images/logos/lit.svg"
+      center
+      noarrow
+    ></gwds-component-title>
+
+    <script>
+      const description =
+        "With the new version, **GeneXus 18**, it is possible to create new and colossal digital ecosystems, integrate with these in an outsourced way to speed up your solution and build Scalable Mission Critical Applications in a safe, fast and automatic way.";
+      const firstSlider = document.querySelector("gwds-slider");
+      //firstSlider.setAttribute('description', description);
+    </script>
+  </body>
+</html>

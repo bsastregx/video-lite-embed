@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Blocks</title>
+    <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="../node_modules/lit/polyfill-support.js"></script>
+    <link rel="stylesheet" href="../src/styles/styles.css" />
+    <script type="module" src="../components/blocks/gwds-blocks.js"></script>
+    <script
+      type="module"
+      src="../components/component-title/gwds-component-title.js"
+    ></script>
+  </head>
+  <body>
+    <gwds-component-title label="gwds-blocks properties" props>
+      bgcolor: string = 'white'; <br />
+      iconsrc: string | undefined = undefined; <br />
+      iconsize: 's' | 'm' | 'l' = 'm'; <br />
+      pretitle: string | undefined = undefined; <br />
+      maintitle: string | undefined = undefined; <br />
+      description: string | undefined = undefined; <br />
+      display: 'grid-2' | 'grid-3' | 'grid-aside' = 'grid-2'; <br />
+      pt0: boolean = false; //padding-top:0 <br />
+      pb0: boolean = false; //padding-bottom:0 <br />
+      firstbuttonlabel: string | undefined = undefined; <br />
+      firstbuttonurl: string | undefined = undefined; <br />
+      firstbuttontype: 'primary' | 'secondary' | 'tertiary' = 'primary'; <br />
+      firstbuttontarget: '_blank' | '_self' = '_self'; <br />
+      secondbuttonlabel: string | undefined = undefined; <br />
+      secondbuttonurl: string | undefined = undefined; <br />
+      secondbuttontype: 'primary' | 'secondary' | 'tertiary' = 'secondary';<br />
+      secondbuttontarget: '_blank' | '_self' = '_self'; <br />
+      thirdbuttonlabel: string | undefined = undefined; <br />
+      thirdbuttonurl: string | undefined = undefined; <br />
+      thirdbuttontype: 'primary' | 'secondary' | 'tertiary' = 'tertiary'; <br />
+      thirdbuttontarget: '_blank' | '_self' = '_self'; <br />
+      linklabel: string | undefined = undefined; <br />
+      linkurl: string | undefined = undefined; <br />
+      linktarget: '_blank' | '_self' = '_self'; <br />
+      slot -> any type of content | suggested content: gwds-card(s) <br />
+      slot="description" -> description as slotted content
+    </gwds-component-title>
+    <gwds-component-title
+      label="gwds-blocks (display: grid-2)"
+    ></gwds-component-title>
+    <!-- grid-2 -->
+    <gwds-blocks
+      bgcolor="red-400"
+      display="grid-2"
+      iconsrc="./assets/images/other/dummy-icon.png"
+      pretitle="Pre-title"
+      maintitle="Meet Our Academic Program Partner"
+      firstbuttonlabel="Primary Button"
+      firstbuttonurl="/label"
+      firstbuttontype="primary"
+      secondbuttonlabel="Secondary Button"
+      secondbuttonurl="/label"
+      secondbuttontype="secondary"
+      thirdbuttonlabel="Teritary Button"
+      thirdbuttonurl="/label"
+      thirdbuttontype="tertiary"
+      linklabel="Label text"
+      linkurl="www.google.com"
+    >
+      <gwds-card
+        bgcolor="black-opacity"
+        titlelabel="Freedom & Accountability"
+        linklabel="more info"
+        linkurl="https://en.wikipedia.org/wiki/Owl"
+        linktarget="_blank"
+        id="gwds-first-card"
+      >
+      </gwds-card>
+      <gwds-card
+        bgcolor="black-opacity"
+        titlelabel="Respect & Trust"
+        description="The foundations of our organizational culture are based on the pillars of respect and trust. Respect for our differences, styles and opinions allows us to make better decisions. Trust in our teammates allows us to better align our interests, to execute decisions more efficiently."
+        linklabel="more info"
+        linkurl="https://en.wikipedia.org/wiki/Owl"
+        linktarget="_blank"
+      >
+      </gwds-card>
+      <gwds-card
+        bgcolor="black-opacity"
+        titlelabel="Diversity & Tolerance"
+        description="At GeneXus we promote diversity of ideas and people, as well as of styles and thoughts. The different ways of understanding and living the world and the multiple experiences of each one, allow us to generate more and better ideas and solutions. Diversity, tolerance and respect for our differences are fundamental to working successfully on projects that require constant innovation."
+        linklabel="more info"
+        linkurl="https://en.wikipedia.org/wiki/Owl"
+        linktarget="_blank"
+      >
+      </gwds-card>
+    </gwds-blocks>
+
+    <!-- grid-3 -->
+    <gwds-component-title
+      label="gwds-blocks (display: grid-3)"
+    ></gwds-component-title>
+    <gwds-blocks
+      bgcolor="violet-500"
+      display="grid-3"
+      iconsrc="./assets/images/other/dummy-icon.png"
+      pretitle="Pre-title"
+      maintitle="Meet Our Academic Program Partner"
+      firstbuttonlabel="Primary Button"
+      firstbuttonurl="/label"
+      firstbuttontype="primary"
+      secondbuttonlabel="Secondary Button"
+      secondbuttonurl="/label"
+      secondbuttontype="secondary"
+      thirdbuttonlabel="Teritary Button"
+      thirdbuttonurl="/label"
+      thirdbuttontype="tertiary"
+      linklabel="Label text"
+      linkurl="www.google.com"
+    >
+      <gwds-card
+        bgcolor="black-opacity"
+        titlelabel="Freedom & Accountability"
+        description="We interconnect with responsibility and freedom. Every day we seek to be flexible and integrate the interests, objectives and needs of our people and our company. We are professionals and we believe that a context of freedom and responsibility inspires creativity, fosters a good environment and generates great results."
+        linklabel="more info"
+        linkurl="https://en.wikipedia.org/wiki/Owl"
+        linktarget="_blank"
+      >
+      </gwds-card>
+      <gwds-card
+        bgcolor="black-opacity"
+        titlelabel="Respect & Trust"
+        description="The foundations of our organizational culture are based on the pillars of respect and trust. Respect for our differences, styles and opinions allows us to make better decisions. Trust in our teammates allows us to better align our interests, to execute decisions more efficiently."
+        linklabel="more info"
+        linkurl="https://en.wikipedia.org/wiki/Owl"
+        linktarget="_blank"
+      >
+      </gwds-card>
+      <gwds-card
+        bgcolor="black-opacity"
+        titlelabel="Diversity & Tolerance"
+        description="At GeneXus we promote diversity of ideas and people, as well as of styles and thoughts. The different ways of understanding and living the world and the multiple experiences of each one, allow us to generate more and better ideas and solutions. Diversity, tolerance and respect for our differences are fundamental to working successfully on projects that require constant innovation."
+        linklabel="more info"
+        linkurl="https://en.wikipedia.org/wiki/Owl"
+        linktarget="_blank"
+      >
+      </gwds-card>
+    </gwds-blocks>
+
+    <!-- grid-aside -->
+    <gwds-component-title
+      label="gwds-blocks (display: grid-aside)"
+    ></gwds-component-title>
+    <gwds-blocks
+      bgcolor="green-900"
+      display="grid-aside"
+      iconsrc="./assets/images/other/dummy-icon.png"
+      pretitle="Pre-title"
+      maintitle="Meet Our Academic Program Partner"
+      firstbuttonlabel="Primary Button"
+      firstbuttonurl="/label"
+      firstbuttontype="primary"
+      secondbuttonlabel="Secondary Button"
+      secondbuttonurl="/label"
+      secondbuttontype="secondary"
+      thirdbuttonlabel="Teritary Button"
+      thirdbuttonurl="/label"
+      thirdbuttontype="tertiary"
+      linklabel="Label text"
+      linkurl="www.google.com"
+    >
+      <p slot="description">
+        Chameleons or chamaeleons (family Chamaeleonidae) are a distinctive and
+        highly specialized clade of Old World lizards with 202 species described
+        as of June 2015.
+      </p>
+      <p slot="description">
+        Chameleons or chamaeleons (family Chamaeleonidae) are a distinctive and
+        highly specialized clade of Old World lizards with 202 species described
+        as of June 2015.
+      </p>
+      <gwds-card
+        bgcolor="black-opacity"
+        titlelabel="Freedom & Accountability"
+        description="We interconnect with responsibility and freedom. Every day we seek to be flexible and integrate the interests, objectives and needs of our people and our company. We are professionals and we believe that a context of freedom and responsibility inspires creativity, fosters a good environment and generates great results."
+        linklabel="more info"
+        linkurl="https://en.wikipedia.org/wiki/Owl"
+        linktarget="_blank"
+      >
+      </gwds-card>
+      <gwds-card
+        bgcolor="black-opacity"
+        titlelabel="Respect & Trust"
+        description="The foundations of our organizational culture are based on the pillars of respect and trust. Respect for our differences, styles and opinions allows us to make better decisions. Trust in our teammates allows us to better align our interests, to execute decisions more efficiently."
+        linklabel="more info"
+        linkurl="https://en.wikipedia.org/wiki/Owl"
+        linktarget="_blank"
+      >
+      </gwds-card>
+      <gwds-card
+        bgcolor="black-opacity"
+        titlelabel="Diversity & Tolerance"
+        description="At GeneXus we promote diversity of ideas and people, as well as of styles and thoughts. The different ways of understanding and living the world and the multiple experiences of each one, allow us to generate more and better ideas and solutions. Diversity, tolerance and respect for our differences are fundamental to working successfully on projects that require constant innovation."
+        linklabel="more info"
+        linkurl="https://en.wikipedia.org/wiki/Owl"
+        linktarget="_blank"
+      >
+      </gwds-card>
+    </gwds-blocks>
+    <gwds-component-title
+      label="Built with Lit"
+      imgsrc="./assets/images/logos/lit.svg"
+      center
+      noarrow
+    ></gwds-component-title>
+    <script>
+      const description =
+        "With the new version, **GeneXus 18**, it is possible to create new and colossal digital ecosystems, integrate with these in an outsourced way to speed up your solution and build Scalable Mission Critical Applications in a safe, fast and automatic way.";
+      const blocks = document.querySelectorAll("gwds-blocks");
+      blocks.forEach((blocks, i) => {
+        if (i === 0 || i === 1) {
+          blocks.setAttribute("description", description);
+        }
+      });
+      const firstCard = document.getElementById("gwds-first-card");
+      firstCard.setAttribute("description", description);
+    </script>
+  </body>
+</html>

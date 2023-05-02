@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cards</title>
+    <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="../node_modules/lit/polyfill-support.js"></script>
+    <script type="module" src="../components/cards/gwds-cards.js"></script>
+    <script
+      type="module"
+      src="../components/component-title/gwds-component-title.js"
+    ></script>
+    <link rel="stylesheet" href="../src/styles/styles.css" />
+  </head>
+  <body>
+    <gwds-component-title label="gwds-cards properties" props>
+      bgcolor: string = 'white'; <br />
+      iconsrc: string | undefined = undefined; <br />
+      iconsize: 's' | 'm' | 'l' = 'm'; <br />
+      pretitle: string | undefined = undefined; <br />
+      maintitle: string | undefined = undefined; <br />
+      description: string | undefined = undefined; <br />
+      pt0: boolean = false; //padding-top:0 <br />
+      pb0: boolean = false; //padding-bottom:0 <br />
+      cardsimgheight: string | undefined = undefined; <br />
+      slider: boolean = false; <br />
+      slot -> gwds-card(s) <br />
+      slot="description" -> description as slotted content
+    </gwds-component-title>
+    <gwds-component-title label="gwds-card properties" props>
+      bgcolor: string = 'white'; <br />
+      imgsrc: string | undefined = undefined; <br />
+      imgalt: string | undefined = undefined; <br />
+      imgheight: string = '230px' <br />
+      taglabel: string | undefined = undefined; <br />
+      titlelabel: string | undefined = undefined; <br />
+      description: string | undefined = undefined; <br />
+      linklabel: string | undefined = undefined; <br />
+      linkurl: string | undefined = undefined; <br />
+      linktarget: '_blank' | '_self' = '_self'; <br />
+      noshadow: boolean = false;
+    </gwds-component-title>
+    <!-- light background -->
+    <gwds-cards
+      iconsrc="./assets/images/other/dummy-icon.png"
+      pretitle="Pre-title"
+      maintitle="Meet Our Academic Program Partner"
+    >
+      <gwds-card
+        imgsrc="./assets/images/pexels-animals-01.jpg"
+        imgalt="Chameleon"
+        taglabel="Reptile"
+        titlelabel="Chameleon"
+        linklabel="more info"
+        linkurl="https://en.wikipedia.org/wiki/Chameleon"
+        linktarget="_blank"
+        description="With the new version, **GeneXus 18**, it is possible to create new and colossal digital ecosystems, integrate with these in an outsourced way to speed up your solution and build Scalable Mission Critical Applications in a safe, fast and automatic way."
+      >
+      </gwds-card>
+
+      <gwds-card
+        imgsrc="./assets/images/pexels-animals-06.jpg"
+        imgalt="Owl"
+        taglabel="Bird"
+        titlelabel="Owl"
+        linklabel="more info"
+        linkurl="https://en.wikipedia.org/wiki/Owl"
+        linktarget="_blank"
+      >
+        <p slot="description">
+          Chameleons or chamaeleons (family Chamaeleonidae) are a distinctive
+          and highly specialized clade of Old World lizards with 202 species
+          described as of June 2015.
+        </p>
+        <p slot="description">
+          Chameleons or chamaeleons (family Chamaeleonidae) are a distinctive
+          and highly specialized clade of Old World lizards with 202 species
+          described as of June 2015.
+        </p>
+      </gwds-card>
+
+      <gwds-card
+        imgsrc="./assets/images/pexels-animals-07.jpg"
+        imgalt="Dog"
+        taglabel="Mammal"
+        titlelabel="Dog"
+        linklabel="more info"
+        linkurl="https://en.wikipedia.org/wiki/Dog"
+        linktarget="_blank"
+      >
+        <p slot="description">
+          The dog is derived from an ancient, extinct wolf,[6][7] and the modern
+          wolf is the dog's nearest living relative.
+        </p>
+      </gwds-card>
+
+      <gwds-card
+        imgsrc="./assets/images/pexels-animals-03.jpg"
+        imgalt="Flamingo"
+        taglabel="Bird"
+        titlelabel="Flamingo"
+        linklabel="more info"
+        linkurl="https://en.wikipedia.org/wiki/Flamingo"
+        linktarget="_blank"
+      >
+        <p slot="description">
+          Flamingos or flamingoes[a] /fləˈmɪŋɡoʊz/ are a type of wading bird in
+          the family Phoenicopteridae, which is the only extant family in the
+          order Phoenicopteriformes.
+        </p>
+      </gwds-card>
+
+      <gwds-card
+        imgsrc="./assets/images/pexels-animals-02.jpg"
+        imgalt="Clownfish"
+        taglabel="Fish"
+        titlelabel="Clownfish"
+        linklabel="more info"
+        linkurl="https://en.wikipedia.org/wiki/Amphiprioninae"
+        linktarget="_blank"
+      >
+        <p slot="description">
+          lownfish or anemonefish are fishes from the subfamily Amphiprioninae
+          in the family Pomacentridae.
+        </p>
+      </gwds-card>
+
+      <gwds-card
+        imgsrc="./assets/images/pexels-animals-04.jpg"
+        imgalt="Peafowl"
+        taglabel="Bird"
+        titlelabel="Peafowl"
+        linklabel="more info"
+        linkurl="https://en.wikipedia.org/wiki/Peafowl"
+        linktarget="_blank"
+      >
+        <p slot="description">
+          Peafowl is a common name for three bird species in the genera Pavo and
+          Afropavo within the tribe Pavonini of the family Phasianidae, the
+          pheasants and their allies.
+        </p>
+      </gwds-card>
+    </gwds-cards>
+
+    <!-- dark background -->
+    <gwds-cards
+      iconsrc="./assets/images/other/dummy-icon.png"
+      pretitle="Pre-title"
+      maintitle="Meet Our Academic Program Partner"
+      bgcolor="black"
+    >
+      <p slot="description">
+        With the new version, **GeneXus 18**, it is possible to create new and
+        colossal digital ecosystems, integrate with these in an outsourced way
+        to speed up your solution and build Scalable Mission Critical
+        Applications in a safe, fast and automatic way.
+      </p>
+
+      <gwds-card
+        imgsrc="./assets/images/pexels-animals-01.jpg"
+        imgalt="Chameleon"
+        taglabel="Reptile"
+        titlelabel="Chameleon"
+        linklabel="more info"
+        linkurl="https://en.wikipedia.org/wiki/Chameleon"
+        linktarget="_blank"
+      >
+        <p slot="description">
+          Chameleons or chamaeleons (family Chamaeleonidae) are a distinctive
+          and highly specialized clade of Old World lizards with 202 species
+          described as of June 2015.
+        </p>
+        <p slot="description">
+          Chameleons or chamaeleons (family Chamaeleonidae) are a distinctive
+          and highly specialized clade of Old World lizards with 202 species
+          described as of June 2015.
+        </p>
+      </gwds-card>
+
+      <gwds-card
+        imgsrc="./assets/images/pexels-animals-06.jpg"
+        imgalt="Owl"
+        taglabel="Bird"
+        titlelabel="Owl"
+        linklabel="more info"
+        linkurl="https://en.wikipedia.org/wiki/Owl"
+        linktarget="_blank"
+      >
+        <p slot="description">
+          Owls hunt mostly small mammals, insects, and other birds, although a
+          few species specialize in hunting fish.
+        </p>
+      </gwds-card>
+
+      <gwds-card
+        imgsrc="./assets/images/pexels-animals-07.jpg"
+        imgalt="Dog"
+        taglabel="Mammal"
+        titlelabel="Dog"
+        linklabel="more info"
+        linkurl="https://en.wikipedia.org/wiki/Dog"
+        linktarget="_blank"
+      >
+        <p slot="description">
+          The dog is derived from an ancient, extinct wolf,[6][7] and the modern
+          wolf is the dog's nearest living relative.
+        </p>
+      </gwds-card>
+
+      <gwds-card
+        imgsrc="./assets/images/pexels-animals-03.jpg"
+        imgalt="Flamingo"
+        taglabel="Bird"
+        titlelabel="Flamingo"
+        linklabel="more info"
+        linkurl="https://en.wikipedia.org/wiki/Flamingo"
+        linktarget="_blank"
+      >
+        <p slot="description">
+          Flamingos or flamingoes[a] /fləˈmɪŋɡoʊz/ are a type of wading bird in
+          the family Phoenicopteridae, which is the only extant family in the
+          order Phoenicopteriformes.
+        </p>
+      </gwds-card>
+
+      <gwds-card
+        imgsrc="./assets/images/pexels-animals-02.jpg"
+        imgalt="Clownfish"
+        taglabel="Fish"
+        titlelabel="Clownfish"
+        linklabel="more info"
+        linkurl="https://en.wikipedia.org/wiki/Amphiprioninae"
+        linktarget="_blank"
+      >
+        <p slot="description">
+          lownfish or anemonefish are fishes from the subfamily Amphiprioninae
+          in the family Pomacentridae.
+        </p>
+      </gwds-card>
+
+      <gwds-card
+        imgsrc="./assets/images/pexels-animals-04.jpg"
+        imgalt="Peafowl"
+        taglabel="Bird"
+        titlelabel="Peafowl"
+        linklabel="more info"
+        linkurl="https://en.wikipedia.org/wiki/Peafowl"
+        linktarget="_blank"
+      >
+        <p slot="description">
+          Peafowl is a common name for three bird species in the genera Pavo and
+          Afropavo within the tribe Pavonini of the family Phasianidae, the
+          pheasants and their allies.
+        </p>
+      </gwds-card>
+    </gwds-cards>
+
+    <!-- with slider -->
+    <gwds-component-title label="gwds-cards (slider)"></gwds-component-title>
+    <gwds-cards
+      iconsrc="./assets/images/other/dummy-icon.png"
+      pretitle="Pre-title"
+      maintitle="Meet Our Academic Program Partner"
+      slider
+    >
+      <p slot="description">
+        With the new version, **GeneXus 18**, it is possible to create new and
+        colossal digital ecosystems, integrate with these in an outsourced way
+        to speed up your solution and build Scalable Mission Critical
+        Applications in a safe, fast and automatic way.
+      </p>
+
+      <gwds-card
+        imgsrc="./assets/images/pexels-animals-01.jpg"
+        imgalt="Chameleon"
+        taglabel="Reptile"
+        titlelabel="Chameleon"
+        linklabel="more info"
+        linkurl="https://en.wikipedia.org/wiki/Chameleon"
+        linktarget="_blank"
+      >
+        <p slot="description">
+          Chameleons or chamaeleons (family Chamaeleonidae) are a distinctive
+          and highly specialized clade of Old World lizards with 202 species
+          described as of June 2015.
+        </p>
+      </gwds-card>
+
+      <gwds-card
+        imgsrc="./assets/images/pexels-animals-06.jpg"
+        imgalt="Owl"
+        taglabel="Bird"
+        titlelabel="Owl"
+        linklabel="more info"
+        linkurl="https://en.wikipedia.org/wiki/Owl"
+        linktarget="_blank"
+      >
+        <p slot="description">
+          Owls hunt mostly small mammals, insects, and other birds, although a
+          few species specialize in hunting fish.
+        </p>
+      </gwds-card>
+
+      <gwds-card
+        imgsrc="./assets/images/pexels-animals-07.jpg"
+        imgalt="Dog"
+        taglabel="Mammal"
+        titlelabel="Dog"
+        linklabel="more info"
+        linkurl="https://en.wikipedia.org/wiki/Dog"
+        linktarget="_blank"
+      >
+        <p slot="description">
+          The dog is derived from an ancient, extinct wolf,[6][7] and the modern
+          wolf is the dog's nearest living relative.
+        </p>
+      </gwds-card>
+
+      <gwds-card
+        imgsrc="./assets/images/pexels-animals-03.jpg"
+        imgalt="Flamingo"
+        taglabel="Bird"
+        titlelabel="Flamingo"
+        linklabel="more info"
+        linkurl="https://en.wikipedia.org/wiki/Flamingo"
+        linktarget="_blank"
+      >
+        <p slot="description">
+          Flamingos or flamingoes[a] /fləˈmɪŋɡoʊz/ are a type of wading bird in
+          the family Phoenicopteridae, which is the only extant family in the
+          order Phoenicopteriformes.
+        </p>
+      </gwds-card>
+
+      <gwds-card
+        imgsrc="./assets/images/pexels-animals-02.jpg"
+        imgalt="Clownfish"
+        taglabel="Fish"
+        titlelabel="Clownfish"
+        linklabel="more info"
+        linkurl="https://en.wikipedia.org/wiki/Amphiprioninae"
+        linktarget="_blank"
+      >
+        <p slot="description">
+          lownfish or anemonefish are fishes from the subfamily Amphiprioninae
+          in the family Pomacentridae.
+        </p>
+      </gwds-card>
+
+      <gwds-card
+        imgsrc="./assets/images/pexels-animals-04.jpg"
+        imgalt="Peafowl"
+        taglabel="Bird"
+        titlelabel="Peafowl"
+        linklabel="more info"
+        linkurl="https://en.wikipedia.org/wiki/Peafowl"
+        linktarget="_blank"
+      >
+        <p slot="description">
+          Peafowl is a common name for three bird species in the genera Pavo and
+          Afropavo within the tribe Pavonini of the family Phasianidae, the
+          pheasants and their allies.
+        </p>
+      </gwds-card>
+    </gwds-cards>
+
+    <gwds-component-title
+      label="Built with Lit"
+      imgsrc="./assets/images/logos/lit.svg"
+      center
+      noarrow
+    ></gwds-component-title>
+
+    <script>
+      const description =
+        "With the new version, **GeneXus 18**, it is possible to create new and colossal digital ecosystems, integrate with these in an outsourced way to speed up your solution and build Scalable Mission Critical Applications in a safe, fast and automatic way.";
+      const firstCards = document.querySelector("gwds-cards");
+      firstCards.setAttribute("description", description);
+    </script>
+  </body>
+</html>

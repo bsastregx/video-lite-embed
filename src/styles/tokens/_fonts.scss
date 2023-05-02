@@ -1,0 +1,26 @@
+:root {
+  //FONT FAMILY
+  --gwds__font-family--body: "Rubik", "sans-serif";
+  --gwds__font-family--headings: "Graphik", "sans-serif";
+
+  //FONT SIZE
+  --gwds__font-size--xs: 12px;
+  --gwds__font-size--s: 14px;
+  --gwds__font-size--m: 17px;
+  --gwds__font-size--l: 26px;
+  --gwds__font-size--xl: 36px;
+  --gwds__font-size--xxl: 44px;
+  --gwds__font-size--xxxl: 52px;
+
+  //FONT WEIGHT:
+  --gwds__font-weight--light: 300;
+  --gwds__font-weight--regular: 400;
+  --gwds__font-weight--medium: 500;
+  --gwds__font-weight--semibold: 600;
+  --gwds__font-weight--bold: 700;
+
+  //LINE HEIGHT
+  --gwds__line-height--tight: 1.35em;
+  --gwds__line-height--regular: 1.5em;
+  --gwds__line-height--spaced: 1.65em;
+}

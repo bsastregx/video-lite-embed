@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Test</title>
+    <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="../node_modules/lit/polyfill-support.js"></script>
+    <script type="module" src="../components/logos/gwds-logos.js"></script>
+    <script
+      type="module"
+      src="../components/component-title/gwds-component-title.js"
+    ></script>
+    <link rel="stylesheet" href="../src/styles/styles.css" />
+    <style></style>
+  </head>
+  <body>
+    <gwds-component-title label="gwds-logos properties" props>
+      bgcolor: string = 'white'; <br />
+      iconsrc: string | undefined = undefined; <br />
+      iconsize: 's' | 'm' | 'l' = 'm'; <br />
+      maintitle: string | undefined = undefined; <br />
+      pt0: boolean = false; //padding-top:0 <br />
+      pb0: boolean = false; //padding-bottom:0 <br />
+      disablesquared: boolean = false; //when false, forces the logo to be
+      <br />
+    </gwds-component-title>
+    <gwds-component-title label="gwds-logos-group properties" props>
+      maintitle: string | undefined = undefined; <br />
+    </gwds-component-title>
+    <gwds-component-title label="gwds-logo properties" props>
+      bgcolor: string = 'dark-200'; <br />
+      imgsrc: string | undefined = undefined; <br />
+      imgalt: string | undefined = undefined; <br />
+      label: string | undefined = undefined; <br />
+      size: string = "32px"; <br />
+      linkurl: string | undefined = undefined; <br />
+    </gwds-component-title>
+
+    <!-- light theme -->
+    <gwds-component-title label="gwds-logos (default)"></gwds-component-title>
+    <gwds-logos
+      maintitle="Our current clients"
+      iconsrc="./assets/images/other/dummy-icon.png"
+    >
+      <!-- gold -->
+      <gwds-logos-group maintitle="Gold">
+        <gwds-logo
+          label="Apple"
+          imgsrc="./assets/images/logos/logo-apple.svg"
+          imgalt="apple logo"
+          size="30px"
+          linkurl="https://www.apple.com/"
+        ></gwds-logo>
+        <gwds-logo
+          label="Microsoft"
+          imgsrc="./assets/images/logos/logo-windows.svg"
+          }
+          imgalt="microsoft logo"
+          size="30px"
+          linkurl="https://www.microsoft.com/es-uy/"
+        ></gwds-logo>
+        <gwds-logo
+          label="Apple"
+          imgsrc="./assets/images/logos/logo-apple.svg"
+          imgalt="apple logo"
+          size="30px"
+          linkurl="https://www.apple.com/"
+        ></gwds-logo>
+        <gwds-logo
+          label="Microsoft"
+          imgsrc="./assets/images/logos/logo-windows.svg"
+          imgalt="microsoft logo"
+          size="30px"
+          linkurl="https://www.microsoft.com/es-uy/"
+        ></gwds-logo>
+        <gwds-logo
+          label="Apple"
+          imgsrc="./assets/images/logos/logo-apple.svg"
+          imgalt="apple logo"
+          size="30px"
+          linkurl="https://www.apple.com/"
+        ></gwds-logo>
+        <gwds-logo
+          label="Microsoft"
+          imgsrc="./assets/images/logos/logo-windows.svg"
+          imgalt="microsoft logo"
+          size="30px"
+          linkurl="https://www.microsoft.com/es-uy/"
+        ></gwds-logo>
+      </gwds-logos-group>
+
+      <!-- silver -->
+      <gwds-logos-group maintitle="Silver">
+        <gwds-logo
+          label="Apple"
+          imgsrc="./assets/images/logos/logo-apple.svg"
+          imgalt="apple logo"
+          size="30px"
+          linkurl="https://www.apple.com/"
+        ></gwds-logo>
+        <gwds-logo
+          label="Microsoft"
+          imgsrc="./assets/images/logos/logo-windows.svg"
+          }
+          imgalt="microsoft logo"
+          size="30px"
+          linkurl="https://www.microsoft.com/es-uy/"
+        ></gwds-logo>
+        <gwds-logo
+          label="Apple"
+          imgsrc="./assets/images/logos/logo-apple.svg"
+          imgalt="apple logo"
+          size="30px"
+          linkurl="https://www.apple.com/"
+        ></gwds-logo>
+        <gwds-logo
+          label="Microsoft"
+          imgsrc="./assets/images/logos/logo-windows.svg"
+          imgalt="microsoft logo"
+          size="30px"
+          linkurl="https://www.microsoft.com/es-uy/"
+        ></gwds-logo>
+        <gwds-logo
+          label="Apple"
+          imgsrc="./assets/images/logos/logo-apple.svg"
+          imgalt="apple logo"
+          size="30px"
+          linkurl="https://www.apple.com/"
+        ></gwds-logo>
+        <gwds-logo
+          label="Microsoft"
+          imgsrc="./assets/images/logos/logo-windows.svg"
+          imgalt="microsoft logo"
+          size="30px"
+          linkurl="https://www.microsoft.com/es-uy/"
+        ></gwds-logo>
+      </gwds-logos-group>
+
+      <!-- bronze -->
+      <gwds-logos-group maintitle="Bronze">
+        <gwds-logo
+          label="Apple"
+          imgsrc="./assets/images/logos/logo-apple.svg"
+          imgalt="apple logo"
+          size="30px"
+          linkurl="https://www.apple.com/"
+        ></gwds-logo>
+        <gwds-logo
+          label="Microsoft"
+          imgsrc="./assets/images/logos/logo-windows.svg"
+          }
+          imgalt="microsoft logo"
+          size="30px"
+          linkurl="https://www.microsoft.com/es-uy/"
+        ></gwds-logo>
+        <gwds-logo
+          label="Apple"
+          imgsrc="./assets/images/logos/logo-apple.svg"
+          imgalt="apple logo"
+          size="30px"
+          linkurl="https://www.apple.com/"
+        ></gwds-logo>
+        <gwds-logo
+          label="Microsoft"
+          imgsrc="./assets/images/logos/logo-windows.svg"
+          imgalt="microsoft logo"
+          size="30px"
+          linkurl="https://www.microsoft.com/es-uy/"
+        ></gwds-logo>
+        <gwds-logo
+          label="Apple"
+          imgsrc="./assets/images/logos/logo-apple.svg"
+          imgalt="apple logo"
+          size="30px"
+          linkurl="https://www.apple.com/"
+        ></gwds-logo>
+        <gwds-logo
+          label="Microsoft"
+          imgsrc="./assets/images/logos/logo-windows.svg"
+          imgalt="microsoft logo"
+          size="30px"
+          linkurl="https://www.microsoft.com/es-uy/"
+        ></gwds-logo>
+      </gwds-logos-group>
+    </gwds-logos>
+
+    <!-- dark theme -->
+    <gwds-logos
+      iconsrc="./assets/images/other/dummy-icon.png"
+      maintitle="Our current clients"
+      bgcolor="dark-900"
+      boxescolor="dark-800"
+    >
+      <!-- gold -->
+      <gwds-logos-group maintitle="Gold">
+        <gwds-logo
+          label="Apple"
+          imgsrc="./assets/images/logos/logo-apple.svg"
+          imgalt="apple logo"
+          size="30px"
+          linkurl="https://www.apple.com/"
+          squared
+        ></gwds-logo>
+        <gwds-logo
+          label="Microsoft"
+          imgsrc="./assets/images/logos/logo-windows.svg"
+          }
+          imgalt="microsoft logo"
+          size="30px"
+          linkurl="https://www.microsoft.com/es-uy/"
+        ></gwds-logo>
+        <gwds-logo
+          label="Apple"
+          imgsrc="./assets/images/logos/logo-apple.svg"
+          imgalt="apple logo"
+          size="30px"
+          linkurl="https://www.apple.com/"
+        ></gwds-logo>
+        <gwds-logo
+          label="Microsoft"
+          imgsrc="./assets/images/logos/logo-windows.svg"
+          imgalt="microsoft logo"
+          size="30px"
+          linkurl="https://www.microsoft.com/es-uy/"
+        ></gwds-logo>
+        <gwds-logo
+          label="Apple"
+          imgsrc="./assets/images/logos/logo-apple.svg"
+          imgalt="apple logo"
+          size="30px"
+          linkurl="https://www.apple.com/"
+        ></gwds-logo>
+        <gwds-logo
+          label="Microsoft"
+          imgsrc="./assets/images/logos/logo-windows.svg"
+          imgalt="microsoft logo"
+          size="30px"
+          linkurl="https://www.microsoft.com/es-uy/"
+        ></gwds-logo>
+      </gwds-logos-group>
+
+      <!-- silver -->
+      <gwds-logos-group maintitle="Silver">
+        <gwds-logo
+          label="Apple"
+          imgsrc="./assets/images/logos/logo-apple.svg"
+          imgalt="apple logo"
+          size="30px"
+          linkurl="https://www.apple.com/"
+        ></gwds-logo>
+        <gwds-logo
+          label="Microsoft"
+          imgsrc="./assets/images/logos/logo-windows.svg"
+          }
+          imgalt="microsoft logo"
+          size="30px"
+          linkurl="https://www.microsoft.com/es-uy/"
+        ></gwds-logo>
+        <gwds-logo
+          label="Apple"
+          imgsrc="./assets/images/logos/logo-apple.svg"
+          imgalt="apple logo"
+          size="30px"
+          linkurl="https://www.apple.com/"
+        ></gwds-logo>
+        <gwds-logo
+          label="Microsoft"
+          imgsrc="./assets/images/logos/logo-windows.svg"
+          imgalt="microsoft logo"
+          size="30px"
+          linkurl="https://www.microsoft.com/es-uy/"
+        ></gwds-logo>
+        <gwds-logo
+          label="Apple"
+          imgsrc="./assets/images/logos/logo-apple.svg"
+          imgalt="apple logo"
+          size="30px"
+          linkurl="https://www.apple.com/"
+        ></gwds-logo>
+        <gwds-logo
+          label="Microsoft"
+          imgsrc="./assets/images/logos/logo-windows.svg"
+          imgalt="microsoft logo"
+          size="30px"
+          linkurl="https://www.microsoft.com/es-uy/"
+        ></gwds-logo>
+      </gwds-logos-group>
+
+      <!-- bronze -->
+      <gwds-logos-group maintitle="Bronze">
+        <gwds-logo
+          label="Apple"
+          imgsrc="./assets/images/logos/logo-apple.svg"
+          imgalt="apple logo"
+          size="30px"
+          linkurl="https://www.apple.com/"
+        ></gwds-logo>
+        <gwds-logo
+          label="Microsoft"
+          imgsrc="./assets/images/logos/logo-windows.svg"
+          }
+          imgalt="microsoft logo"
+          size="30px"
+          linkurl="https://www.microsoft.com/es-uy/"
+        ></gwds-logo>
+        <gwds-logo
+          label="Apple"
+          imgsrc="./assets/images/logos/logo-apple.svg"
+          imgalt="apple logo"
+          size="30px"
+          linkurl="https://www.apple.com/"
+        ></gwds-logo>
+        <gwds-logo
+          label="Microsoft"
+          imgsrc="./assets/images/logos/logo-windows.svg"
+          imgalt="microsoft logo"
+          size="30px"
+          linkurl="https://www.microsoft.com/es-uy/"
+        ></gwds-logo>
+        <gwds-logo
+          label="Apple"
+          imgsrc="./assets/images/logos/logo-apple.svg"
+          imgalt="apple logo"
+          size="30px"
+          linkurl="https://www.apple.com/"
+        ></gwds-logo>
+        <gwds-logo
+          label="Microsoft"
+          imgsrc="./assets/images/logos/logo-windows.svg"
+          imgalt="microsoft logo"
+          size="30px"
+          linkurl="https://www.microsoft.com/es-uy/"
+        ></gwds-logo>
+      </gwds-logos-group>
+    </gwds-logos>
+
+    <!-- light theme (disablesquared) -->
+    <gwds-component-title
+      label="gwds-logos (disablesquared)"
+    ></gwds-component-title>
+    <gwds-logos
+      maintitle="Our current clients"
+      disablesquared
+      iconsrc="./assets/images/other/dummy-icon.png"
+    >
+      <!-- gold -->
+      <gwds-logos-group maintitle="Gold">
+        <gwds-logo
+          label="Apple"
+          imgsrc="./assets/images/logos/logo-apple.svg"
+          imgalt="apple logo"
+          size="30px"
+          linkurl="https://www.apple.com/"
+          squared
+        ></gwds-logo>
+        <gwds-logo
+          label="Microsoft"
+          imgsrc="./assets/images/logos/logo-windows.svg"
+          }
+          imgalt="microsoft logo"
+          size="30px"
+          linkurl="https://www.microsoft.com/es-uy/"
+        ></gwds-logo>
+        <gwds-logo
+          label="Apple"
+          imgsrc="./assets/images/logos/logo-apple.svg"
+          imgalt="apple logo"
+          size="30px"
+          linkurl="https://www.apple.com/"
+        ></gwds-logo>
+        <gwds-logo
+          label="Microsoft"
+          imgsrc="./assets/images/logos/logo-windows.svg"
+          imgalt="microsoft logo"
+          size="30px"
+          linkurl="https://www.microsoft.com/es-uy/"
+        ></gwds-logo>
+        <gwds-logo
+          label="Apple"
+          imgsrc="./assets/images/logos/logo-apple.svg"
+          imgalt="apple logo"
+          size="30px"
+          linkurl="https://www.apple.com/"
+        ></gwds-logo>
+        <gwds-logo
+          label="Microsoft"
+          imgsrc="./assets/images/logos/logo-windows.svg"
+          imgalt="microsoft logo"
+          size="30px"
+          linkurl="https://www.microsoft.com/es-uy/"
+        ></gwds-logo>
+      </gwds-logos-group>
+
+      <!-- silver -->
+      <gwds-logos-group maintitle="Silver">
+        <gwds-logo
+          label="Apple"
+          imgsrc="./assets/images/logos/logo-apple.svg"
+          imgalt="apple logo"
+          size="30px"
+          linkurl="https://www.apple.com/"
+        ></gwds-logo>
+        <gwds-logo
+          label="Microsoft"
+          imgsrc="./assets/images/logos/logo-windows.svg"
+          }
+          imgalt="microsoft logo"
+          size="30px"
+          linkurl="https://www.microsoft.com/es-uy/"
+        ></gwds-logo>
+        <gwds-logo
+          label="Apple"
+          imgsrc="./assets/images/logos/logo-apple.svg"
+          imgalt="apple logo"
+          size="30px"
+          linkurl="https://www.apple.com/"
+        ></gwds-logo>
+        <gwds-logo
+          label="Microsoft"
+          imgsrc="./assets/images/logos/logo-windows.svg"
+          imgalt="microsoft logo"
+          size="30px"
+          linkurl="https://www.microsoft.com/es-uy/"
+        ></gwds-logo>
+        <gwds-logo
+          label="Apple"
+          imgsrc="./assets/images/logos/logo-apple.svg"
+          imgalt="apple logo"
+          size="30px"
+          linkurl="https://www.apple.com/"
+        ></gwds-logo>
+        <gwds-logo
+          label="Microsoft"
+          imgsrc="./assets/images/logos/logo-windows.svg"
+          imgalt="microsoft logo"
+          size="30px"
+          linkurl="https://www.microsoft.com/es-uy/"
+        ></gwds-logo>
+      </gwds-logos-group>
+
+      <!-- bronze -->
+      <gwds-logos-group maintitle="Bronze">
+        <gwds-logo
+          label="Apple"
+          imgsrc="./assets/images/logos/logo-apple.svg"
+          imgalt="apple logo"
+          size="30px"
+          linkurl="https://www.apple.com/"
+        ></gwds-logo>
+        <gwds-logo
+          label="Microsoft"
+          imgsrc="./assets/images/logos/logo-windows.svg"
+          }
+          imgalt="microsoft logo"
+          size="30px"
+          linkurl="https://www.microsoft.com/es-uy/"
+        ></gwds-logo>
+        <gwds-logo
+          label="Apple"
+          imgsrc="./assets/images/logos/logo-apple.svg"
+          imgalt="apple logo"
+          size="30px"
+          linkurl="https://www.apple.com/"
+        ></gwds-logo>
+        <gwds-logo
+          label="Microsoft"
+          imgsrc="./assets/images/logos/logo-windows.svg"
+          imgalt="microsoft logo"
+          size="30px"
+          linkurl="https://www.microsoft.com/es-uy/"
+        ></gwds-logo>
+        <gwds-logo
+          label="Apple"
+          imgsrc="./assets/images/logos/logo-apple.svg"
+          imgalt="apple logo"
+          size="30px"
+          linkurl="https://www.apple.com/"
+        ></gwds-logo>
+        <gwds-logo
+          label="Microsoft"
+          imgsrc="./assets/images/logos/logo-windows.svg"
+          imgalt="microsoft logo"
+          size="30px"
+          linkurl="https://www.microsoft.com/es-uy/"
+        ></gwds-logo>
+      </gwds-logos-group>
+    </gwds-logos>
+
+    <gwds-component-title
+      label="Built with Lit"
+      imgsrc="./assets/images/logos/lit.svg"
+      center
+      noarrow
+    ></gwds-component-title>
+  </body>
+</html>

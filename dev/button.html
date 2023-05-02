@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Buttons</title>
+    <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="../node_modules/lit/polyfill-support.js"></script>
+    <script type="module" src="../components/button/gwds-button.js"></script>
+    <script
+      type="module"
+      src="../components/component-title/gwds-component-title.js"
+    ></script>
+    <link rel="stylesheet" href="../src/styles/styles.css" />
+    <style>
+      p {
+        margin-top: 2rem;
+      }
+      body {
+        background-color: rgb(219, 219, 219);
+      }
+      gwds-button {
+        margin-right: 16px;
+      }
+      .container {
+        margin-bottom: 64px;
+      }
+    </style>
+  </head>
+  <body>
+    <gwds-component-title label="gwds-button properties" props>
+      label: string | undefined = undefined; <br />
+      type: 'primary' | 'secondary' | 'tertiary' = 'primary'; <br />
+      size: 'small' | 'regular' = 'regular'; <br />
+      url: string | undefined = undefined; <br />
+      target: '_blank' | '_self' = '_self'; <br />
+    </gwds-component-title>
+    <div class="container">
+      <p>regular buttons</p>
+      <gwds-button label="This is a button" type="primary"></gwds-button>
+      <gwds-button label="This is a button" type="secondary"></gwds-button>
+      <gwds-button label="This is a button" type="tertiary"></gwds-button>
+      <br />
+
+      <p>small buttons</p>
+      <gwds-button
+        label="This is a button"
+        type="primary"
+        size="small"
+      ></gwds-button>
+      <gwds-button
+        label="This is a button"
+        type="secondary"
+        size="small"
+      ></gwds-button>
+      <gwds-button
+        label="This is a button"
+        type="tertiary"
+        size="small"
+      ></gwds-button>
+      <br />
+    </div>
+    <gwds-component-title
+      label="Built with Lit"
+      imgsrc="./assets/images/logos/lit.svg"
+      center
+      noarrow
+    ></gwds-component-title>
+  </body>
+</html>

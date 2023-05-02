@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pills</title>
+    <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="../node_modules/lit/polyfill-support.js"></script>
+    <link rel="stylesheet" href="../src/styles/styles.css" />
+    <script type="module" src="../components/pills/gwds-pills.js"></script>
+    <script type="module" src="../components/pills/gwds-pills-item.js"></script>
+    <script
+      type="module"
+      src="../components/component-title/gwds-component-title.js"
+    ></script>
+  </head>
+  <body>
+    <gwds-component-title label="gwds-pills properties" props>
+      bgcolor: string = 'white'; <br />
+      iconsrc: string | undefined = undefined; <br />
+      iconsize: 's' | 'm' | 'l' = 'm'; <br />
+      pretitle: string | undefined = undefined; <br />
+      maintitle: string | undefined = undefined; <br />
+      description: string | undefined = undefined; <br />
+      pt0: boolean = false; //padding-top:0 <br />
+      pb0: boolean = false; //padding-bottom:0 <br />
+      slot -> gwds-pills-item <br />
+      slot="description" -> description as slotted content
+    </gwds-component-title>
+    <gwds-component-title label="gwds-pills-item properties" props>
+      iconurl: string | undefined = undefined; <br />
+      iconalt: string | undefined = undefined; <br />
+      maintitle: string | undefined = undefined; <br />
+      description: string | undefined = undefined; <br />
+      buttonlabel: string | undefined = undefined; <br />
+      buttonurl: string | undefined = undefined; <br />
+      buttontarget: '_blank' | '_self' = '_self'; <br />
+      visible: boolean = false //for internal use<br />
+      slot="description" -> description as slotted content
+    </gwds-component-title>
+
+    <!-- light background -->
+    <gwds-pills
+      iconsrc="./assets/images/other/dummy-icon.png"
+      pretitle="Pre-title"
+      maintitle="What's new in GeneXus 18?"
+    >
+      <gwds-pills-item
+        visible="true"
+        maintitle="GeneXus Training"
+        iconurl="./assets/images/pills/pills-gx18-all-canal-beta.svg"
+        iconalt="something"
+        buttonlabel="Start now"
+        buttonurl="www.google.com"
+      >
+      </gwds-pills-item>
+      <gwds-pills-item
+        maintitle="GeneXus Webinars"
+        iconurl="./assets/images/pills/pills-gx18-all-webinars.svg"
+        iconalt="something"
+        buttonlabel="Start now"
+        buttonurl="www.google.com"
+      >
+        <p slot="description">
+          Online sessions on technology and current topics, led by GeneXus
+          Community experts and partners. Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Excepturi magnam nesciunt nisi, eaque ipsa quo
+          officiis aliquid itaque adipisci vel consectetur minima ducimus
+          doloribus repellendus quidem libero numquam! Quia, optio! Lorem ipsum
+          dolor sit amet consectetur adipisicing elit. Iure suscipit vel maxime
+          cupiditate nobis incidunt autem quos amet, ad sit asperiores magni non
+          debitis quam at dolores, quae provident praesentium. Lorem ipsum dolor
+          sit amet consectetur adipisicing elit.
+        </p>
+        <p slot="description">
+          Sed optio doloremque ullam vel dignissimos ipsam, laudantium tempora
+          blanditiis dolorum cumque quos ex odio nostrum quaerat, autem ea
+          porro, quidem maxime! Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Aliquid molestiae numquam sed asperiores inventore,
+          nisi commodi facilis nesciunt. Aliquid, officiis! Ipsum inventore quae
+          assumenda laudantium necessitatibus nemo sed adipisci culpa? Lorem
+          ipsum dolor sit amet, consectetur adipisicing elit. Id consequatur
+          officia cum, quibusdam, aperiam facilis ab vitae modi veniam optio,
+          velit distinctio voluptatibus. Eaque, laudantium officiis numquam vel
+          unde sapiente!
+        </p>
+      </gwds-pills-item>
+      <gwds-pills-item
+        maintitle="GeneXus Community Wiki"
+        iconurl="./assets/images/pills/pills-gx18-all-wiki.svg"
+        iconalt="something"
+        buttonlabel="Start now"
+        buttonurl="www.google.com"
+      >
+        <p slot="description">
+          Training portal with self-study options and teaching support. Here you
+          will also find the worldwide calendar of courses and certifications.
+        </p>
+      </gwds-pills-item>
+      <gwds-pills-item
+        maintitle="GeneXus Beta Channel"
+        iconurl="./assets/images/pills/pills-gx18-all-canal-beta.svg"
+        iconalt="something"
+        buttonlabel="Start now"
+        buttonurl="www.google.com"
+      >
+        <p slot="description">
+          Test GeneXus features, products and all new technologies before they
+          are released.
+        </p>
+      </gwds-pills-item>
+    </gwds-pills>
+
+    <!-- dark background -->
+    <gwds-pills
+      iconsrc="./assets/images/other/dummy-icon.png"
+      pretitle="Pre-title"
+      maintitle="What's new in GeneXus 18?"
+      bgcolor="dark-900"
+    >
+      <p slot="description">
+        With the new version, GeneXus 18, it is possible to create new and
+        colossal digital ecosystems, integrate with these in an outsourced way
+        to speed up your solution and build Scalable Mission Critical
+        Applications in a safe, fast and automatic way.
+      </p>
+      <gwds-pills-item
+        visible="true"
+        maintitle="GeneXus Training"
+        iconurl="./assets/images/pills/pills-gx18-all-canal-beta.svg"
+        iconalt="something"
+        buttonlabel="Start now"
+        buttonurl="www.google.com"
+      >
+        <p slot="description">
+          Training portal with self-study options and teaching support. Here you
+          will also find the worldwide calendar of courses and certifications.
+        </p>
+      </gwds-pills-item>
+      <gwds-pills-item
+        maintitle="GeneXus Webinars"
+        iconurl="./assets/images/pills/pills-gx18-all-webinars.svg"
+        iconalt="something"
+        buttonlabel="Start now"
+        buttonurl="www.google.com"
+      >
+        <p slot="description">
+          Online sessions on technology and current topics, led by GeneXus
+          Community experts and partners. Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Excepturi magnam nesciunt nisi, eaque ipsa quo
+          officiis aliquid itaque adipisci vel consectetur minima ducimus
+          doloribus repellendus quidem libero numquam! Quia, optio! Lorem ipsum
+          dolor sit amet consectetur adipisicing elit. Iure suscipit vel maxime
+          cupiditate nobis incidunt autem quos amet, ad sit asperiores magni non
+          debitis quam at dolores, quae provident praesentium.
+        </p>
+
+        <p slot="description">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed optio
+          doloremque ullam vel dignissimos ipsam, laudantium tempora blanditiis
+          dolorum cumque quos ex odio nostrum quaerat, autem ea porro, quidem
+          maxime! Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Aliquid molestiae numquam sed asperiores inventore, nisi commodi
+          facilis nesciunt. Aliquid, officiis! Ipsum inventore quae assumenda
+          laudantium necessitatibus nemo sed adipisci culpa? Lorem ipsum dolor
+          sit amet, consectetur adipisicing elit. Id consequatur officia cum,
+          quibusdam, aperiam facilis ab vitae modi veniam optio, velit
+          distinctio voluptatibus. Eaque, laudantium officiis numquam vel unde
+          sapiente!
+        </p>
+      </gwds-pills-item>
+      <gwds-pills-item
+        maintitle="GeneXus Community Wiki"
+        iconurl="./assets/images/pills/pills-gx18-all-wiki.svg"
+        iconalt="something"
+        buttonlabel="Start now"
+        buttonurl="www.google.com"
+      >
+        <p slot="description">
+          Training portal with self-study options and teaching support. Here you
+          will also find the worldwide calendar of courses and certifications.
+        </p>
+      </gwds-pills-item>
+      <gwds-pills-item
+        maintitle="GeneXus Beta Channel"
+        iconurl="./assets/images/pills/pills-gx18-all-canal-beta.svg"
+        iconalt="something"
+        buttonlabel="Start now"
+        buttonurl="www.google.com"
+      >
+        <p slot="description">
+          Test GeneXus features, products and all new technologies before they
+          are released.
+        </p>
+      </gwds-pills-item>
+    </gwds-pills>
+
+    <gwds-component-title
+      label="Built with Lit"
+      imgsrc="./assets/images/logos/lit.svg"
+      center
+      noarrow
+    ></gwds-component-title>
+
+    <script>
+      const description =
+        "With the new version, **GeneXus 18**, it is possible to create new and colossal digital ecosystems, integrate with these in an outsourced way to speed up your solution and build Scalable Mission Critical Applications in a safe, fast and automatic way.  ";
+      const firstPills = document.querySelector("gwds-pills");
+      firstPills.setAttribute("description", description);
+      const firstPill = document.querySelector("gwds-pills-item");
+      firstPill.setAttribute("description", description);
+    </script>
+  </body>
+</html>

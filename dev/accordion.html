@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Accordion</title>
+    <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="../node_modules/lit/polyfill-support.js"></script>
+    <script
+      type="module"
+      src="../components/accordion/gwds-accordion.js"
+    ></script>
+    <script
+      type="module"
+      src="../components/component-title/gwds-component-title.js"
+    ></script>
+    <link rel="stylesheet" href="../src/styles/styles.css" />
+  </head>
+  <body>
+    <gwds-component-title label="gwds-accordion properties" props>
+      bgcolor: string = 'white'; <br />
+      iconsrc: string | undefined = undefined; <br />
+      iconsize: 's' | 'm' | 'l' = 'm'; <br />
+      pretitle: string | undefined = undefined; <br />
+      maintitle: string | undefined = undefined; <br />
+      description: string | undefined = undefined; <br />
+      pt0: boolean = false; //padding-top:0 <br />
+      pb0: boolean = false; //padding-bottom:0 <br />
+      imgsrc: string | undefined = undefined; <br />
+      imgalt: string | undefined = undefined; <br />
+      fixed: boolean = false; <br />
+      slot -> gwds-accordion-item <br />
+      slot="description" -> description as slotted content
+    </gwds-component-title>
+    <gwds-component-title label="gwds-accordion-item properties" props>
+      active: boolean = false; //displays the item opened<br />
+      description: string | undefined = undefined; <br />
+      itemtitle: string | undefined = undefined; <br />
+      slot="description" -> description as slotted content
+    </gwds-component-title>
+
+    <!-- light background -->
+    <gwds-component-title
+      label="gwds-accordion (default)"
+    ></gwds-component-title>
+    <gwds-accordion
+      iconsrc="./assets/images/other/dummy-icon.png"
+      pretitle="Pre-title"
+      maintitle="GeneXus™ FAQ"
+      imgsrc="./assets/images/other/dummy.png"
+      imgalt="dummy image"
+    >
+      <gwds-accordion-item active itemtitle="What is GeneXus™?">
+      </gwds-accordion-item>
+      <gwds-accordion-item itemtitle="Sorry, what?">
+        <p slot="descriptions">
+          Simply put: GeneXus™ is software that makes software. It also
+          maintains programs and databases - automatically.
+        </p>
+      </gwds-accordion-item>
+      <gwds-accordion-item itemtitle="What problem do you solve?"
+        ><p slot="description">
+          We think that software development has become increasingly complex
+          over the years. Apps are easier to use than ever, however creating
+          them requires more knowledge and skills every day as new programming
+          languages, databases and platforms are constantly created. We work
+          every day to solve that problem, making software development easier.
+        </p></gwds-accordion-item
+      >
+      <gwds-accordion-item itemtitle="How?">
+        <p slot="description">
+          To make software development simpler, we automate everything that can
+          be automated. So, GeneXus™ uses a simple, agile, three-step process to
+          create an application:<br /><br />
+          1. Definition (Modeling), which is done in a simple, declarative
+          way.<br />
+          2. Generation (Automation), where an app is created from the previous
+          model.<br />
+          3. Validation (Test), where we validate the app to see if it meets the
+          needs of the user.
+        </p>
+      </gwds-accordion-item>
+      <gwds-accordion-item itemtitle="Why automate?">
+        <p slot="description">
+          This one is a tough question, faced by every industry since the
+          invention of the steam engine. Yet, again and again, craftsmanship is
+          automated, productivity is increased and our quality of life improved.
+          Why should the software industry be different? It shouldn’t! Not with
+          the ever growing demand for software. Craftsmanship is nice, but not
+          in tune with the speed the world we live in requires. There’s a more
+          efficient way of producing software than by hand: It’s automation, and
+          GeneXus™ leads in that path.
+        </p>
+      </gwds-accordion-item>
+      <gwds-accordion-item
+        itemtitle="What kind of applications can be made with GeneXus™?"
+        ><p slot="description">
+          We like to say: “Mission Critical Applications,” meaning, literally,
+          built for the information, processes and technologies, most critical
+          to your business’ main mission. GeneXus applications are not just
+          data-driven; they are built to harness your most important business
+          data, e.g. Core Banking, ERPs, CRMs.
+        </p>
+      </gwds-accordion-item>
+      <gwds-accordion-item
+        itemtitle="Is GeneXus™ Model-Driven Development (MDD)?"
+        ><p slot="description">
+          It is, and it isn’t. GeneXus™ has its own way of “Modeling”, using its
+          own descriptive programming language. In addition, these “models” are
+          created based on the user’s Business Knowledge and needs. This
+          approach allows users to focus on "What" they need technology to do
+          while GeneXus™ automatically handles the technical side of the “How”.
+          The benefits are clear: easier to learn, easier to create apps, and
+          easier to switch between platforms and technologies when technology
+          and market evolve. It’s a “Describe once, deploy everywhere” model,
+          and much, much more.
+        </p>
+      </gwds-accordion-item>
+    </gwds-accordion>
+
+    <!-- dark background -->
+    <gwds-component-title
+      label="gwds-accordion (default)"
+    ></gwds-component-title>
+    <gwds-accordion
+      iconsrc="./assets/images/other/dummy-icon.png"
+      pretitle="Pre-title"
+      maintitle="GeneXus™ FAQ"
+      bgcolor="dark-900"
+      imgsrc="./assets/images/other/dummy.png"
+      imgalt="dummy image"
+    >
+      <p slot="description">
+        Welcome to the GeneXus FAQ section. Here you can find any relevant
+        questions about the product.
+      </p>
+      <gwds-accordion-item active itemtitle="What is GeneXus™?">
+        <p slot="description">
+          GeneXus™ is a Software Development Suite that simplifies and automates
+          the tasks of creating and maintaining enterprise applications and IT
+          systems.
+        </p>
+      </gwds-accordion-item>
+      <gwds-accordion-item itemtitle="Sorry, what?">
+        <p slot="description">
+          Simply put: GeneXus™ is software that makes software. It also
+          maintains programs and databases - automatically.
+        </p>
+      </gwds-accordion-item>
+      <gwds-accordion-item itemtitle="What problem do you solve?"
+        ><p slot="description">
+          We think that software development has become increasingly complex
+          over the years. Apps are easier to use than ever, however creating
+          them requires more knowledge and skills every day as new programming
+          languages, databases and platforms are constantly created. We work
+          every day to solve that problem, making software development easier.
+        </p></gwds-accordion-item
+      >
+      <gwds-accordion-item itemtitle="How?">
+        <p slot="description">
+          To make software development simpler, we automate everything that can
+          be automated. So, GeneXus™ uses a simple, agile, three-step process to
+          create an application:<br /><br />
+          1. Definition (Modeling), which is done in a simple, declarative
+          way.<br />
+          2. Generation (Automation), where an app is created from the previous
+          model.<br />
+          3. Validation (Test), where we validate the app to see if it meets the
+          needs of the user.
+        </p>
+      </gwds-accordion-item>
+      <gwds-accordion-item itemtitle="Why automate?"
+        ><p slot="description">
+          This one is a tough question, faced by every industry since the
+          invention of the steam engine. Yet, again and again, craftsmanship is
+          automated, productivity is increased and our quality of life improved.
+          Why should the software industry be different? It shouldn’t! Not with
+          the ever growing demand for software. Craftsmanship is nice, but not
+          in tune with the speed the world we live in requires. There’s a more
+          efficient way of producing software than by hand: It’s automation, and
+          GeneXus™ leads in that path.
+        </p>
+      </gwds-accordion-item>
+      <gwds-accordion-item
+        itemtitle="What kind of applications can be made with GeneXus™?"
+        ><p slot="description">
+          We like to say: “Mission Critical Applications,” meaning, literally,
+          built for the information, processes and technologies, most critical
+          to your business’ main mission. GeneXus applications are not just
+          data-driven; they are built to harness your most important business
+          data, e.g. Core Banking, ERPs, CRMs.
+        </p>
+      </gwds-accordion-item>
+      <gwds-accordion-item
+        itemtitle="Is GeneXus™ Model-Driven Development (MDD)?"
+        ><p slot="description">
+          It is, and it isn’t. GeneXus™ has its own way of “Modeling”, using its
+          own descriptive programming language. In addition, these “models” are
+          created based on the user’s Business Knowledge and needs. This
+          approach allows users to focus on "What" they need technology to do
+          while GeneXus™ automatically handles the technical side of the “How”.
+          The benefits are clear: easier to learn, easier to create apps, and
+          easier to switch between platforms and technologies when technology
+          and market evolve. It’s a “Describe once, deploy everywhere” model,
+          and much, much more.
+        </p>
+      </gwds-accordion-item>
+    </gwds-accordion>
+
+    <!-- light background (fixed)-->
+    <gwds-component-title label="gwds-accordion (fixed)"></gwds-component-title>
+    <gwds-accordion
+      iconsrc="./assets/images/other/dummy-icon.png"
+      pretitle="Pre-title"
+      maintitle="GeneXus™ FAQ"
+      imgsrc="./assets/images/other/dummy.png"
+      imgalt="dummy image"
+      fixed
+    >
+      <p slot="description">
+        Welcome to the GeneXus FAQ section. Here you can find any relevant
+        questions about the product.
+      </p>
+      <gwds-accordion-item active itemtitle="What is GeneXus™?">
+        <p slot="description">
+          GeneXus™ is a Software Development Suite that simplifies and automates
+          the tasks of creating and maintaining enterprise applications and IT
+          systems.
+        </p>
+      </gwds-accordion-item>
+      <gwds-accordion-item itemtitle="Sorry, what?">
+        <p slot="description">
+          Simply put: GeneXus™ is software that makes software. It also
+          maintains programs and databases - automatically.
+        </p>
+      </gwds-accordion-item>
+      <gwds-accordion-item itemtitle="What problem do you solve?"
+        ><p slot="description">
+          We think that software development has become increasingly complex
+          over the years. Apps are easier to use than ever, however creating
+          them requires more knowledge and skills every day as new programming
+          languages, databases and platforms are constantly created. We work
+          every day to solve that problem, making software development easier.
+        </p></gwds-accordion-item
+      >
+      <gwds-accordion-item itemtitle="How?">
+        <p slot="description">
+          To make software development simpler, we automate everything that can
+          be automated. So, GeneXus™ uses a simple, agile, three-step process to
+          create an application:<br /><br />
+          1. Definition (Modeling), which is done in a simple, declarative
+          way.<br />
+          2. Generation (Automation), where an app is created from the previous
+          model.<br />
+          3. Validation (Test), where we validate the app to see if it meets the
+          needs of the user.
+        </p>
+      </gwds-accordion-item>
+    </gwds-accordion>
+
+    <!-- dark background (fixed)-->
+    <gwds-component-title label="gwds-accordion (fixed)"></gwds-component-title>
+    <gwds-accordion
+      iconsrc="./assets/images/other/dummy-icon.png"
+      pretitle="Pre-title"
+      maintitle="GeneXus™ FAQ"
+      bgcolor="dark-900"
+      imgsrc="./assets/images/other/dummy.png"
+      imgalt="dummy image"
+      fixed
+    >
+      <p slot="description">
+        Welcome to the GeneXus FAQ section. Here you can find any relevant
+        questions about the product.
+      </p>
+      <gwds-accordion-item active itemtitle="What is GeneXus™?">
+        <p slot="description">
+          GeneXus™ is a Software Development Suite that simplifies and automates
+          the tasks of creating and maintaining enterprise applications and IT
+          systems.
+        </p>
+      </gwds-accordion-item>
+      <gwds-accordion-item itemtitle="Sorry, what?">
+        <p slot="description">
+          Simply put: GeneXus™ is software that makes software. It also
+          maintains programs and databases - automatically.
+        </p>
+      </gwds-accordion-item>
+      <gwds-accordion-item itemtitle="What problem do you solve?"
+        ><p slot="description">
+          We think that software development has become increasingly complex
+          over the years. Apps are easier to use than ever, however creating
+          them requires more knowledge and skills every day as new programming
+          languages, databases and platforms are constantly created. We work
+          every day to solve that problem, making software development easier.
+        </p></gwds-accordion-item
+      >
+      <gwds-accordion-item itemtitle="How?">
+        <p slot="description">
+          To make software development simpler, we automate everything that can
+          be automated. So, GeneXus™ uses a simple, agile, three-step process to
+          create an application:<br /><br />
+          1. Definition (Modeling), which is done in a simple, declarative
+          way.<br />
+          2. Generation (Automation), where an app is created from the previous
+          model.<br />
+          3. Validation (Test), where we validate the app to see if it meets the
+          needs of the user.
+        </p>
+      </gwds-accordion-item>
+    </gwds-accordion>
+    <gwds-component-title
+      label="Built with Lit"
+      imgsrc="./assets/images/logos/lit.svg"
+      center
+      noarrow
+    ></gwds-component-title>
+
+    <script>
+      const accordionDescription =
+        "Welcome to the GeneXus FAQ section. Here you can find any relevant questions about the product.";
+      const firstAccordion = document.querySelector("gwds-accordion");
+      firstAccordion.setAttribute("description", accordionDescription);
+
+      const accordionItemDescription =
+        "With the new version, **GeneXus 18**, it is possible to create new and colossal digital ecosystems, integrate with these in an outsourced way to speed up your solution and build Scalable Mission Critical Applications in a safe, fast and automatic way.";
+      const firstAccordionItem = document.querySelector("gwds-accordion-item");
+      firstAccordionItem.setAttribute("description", accordionItemDescription);
+    </script>
+  </body>
+</html>

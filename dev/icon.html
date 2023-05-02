@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Icon</title>
+    <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="../node_modules/lit/polyfill-support.js"></script>
+    <script type="module" src="../components/icon/gwds-icon.js"></script>
+    <script type="module" src="../components/grid/gwds-grid.js"></script>
+    <script
+      type="module"
+      src="../components/component-title/gwds-component-title.js"
+    ></script>
+    <link rel="stylesheet" href="../src/styles/styles.css" />
+    <style>
+      .container {
+        margin-top: var(--gwds__space--m);
+        margin-bottom: var(--gwds__space--m);
+      }
+      .icon-container {
+        width: 100%;
+        padding-top: 100%;
+        position: relative;
+        border: 1px solid var(--gwds__color--dark-400);
+        border-radius: var(--gwds__radius--xxs);
+      }
+      gwds-icon {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+      }
+      .name {
+        position: absolute;
+        bottom: 0;
+        font-size: var(--gwds__font-size--xs);
+        width: 100%;
+        text-align: center;
+        padding: var(--gwds__space--xs);
+        line-height: var(--gwds__line-height--tight);
+      }
+      .intro {
+        text-align: center;
+        margin: var(--gwds__radius--s) 0;
+      }
+      #add-more-icons {
+        background-color: var(--gwds__color--dark-800);
+        color: var(--gwds__color--white);
+        padding: var(--gwds__space--m) 0;
+      }
+      #add-more-icons .title {
+      }
+    </style>
+  </head>
+  <body>
+    <gwds-component-title label="gwds-icon properties" props>
+      color: string | undefined = undefined; <br />
+      autocolor: boolean = false; <br />
+      lazy: boolean = false; <br />
+      size: 'xs' | 's' | 'm' = 's'; <br />
+      name: string | undefined = undefined; //use this if you are using an icon
+      from the gwds library<br />
+      src: string = ""; //use this if you are using an icon outside the gwds
+      library <br />
+    </gwds-component-title>
+
+    <div class="container">
+      <p class="intro">
+        These icons are a curated collection from
+        <strong
+          ><a href="https://fontawesome.com/" target="_blank"
+            >Font Awesome.</a
+          ></strong
+        ><br />
+        <a href="#add-more-icons">How to add more icons.</a>
+      </p>
+    </div>
+
+    <!-- xs -->
+    <gwds-component-title label="gwds-icon (size: xs)"></gwds-component-title>
+    <div class="container">
+      <gwds-grid perrow="6" id="xs"> </gwds-grid>
+    </div>
+
+    <!-- s -->
+    <gwds-component-title label="gwds-icon (size: s)"></gwds-component-title>
+    <div class="container">
+      <gwds-grid perrow="6" id="s"> </gwds-grid>
+    </div>
+
+    <!-- m -->
+    <gwds-component-title label="gwds-icon (size: m)"></gwds-component-title>
+    <div class="container">
+      <gwds-grid perrow="6" id="m"> </gwds-grid>
+    </div>
+
+    <!-- m -->
+    <gwds-component-title
+      label="using icons outside gwds-library"
+    ></gwds-component-title>
+    <div class="container">
+      <p style="margin-bottom: var(--gwds__space--m)">
+        It is also possible to use svg icons from outside gwds library. Just
+        provide the path to the svg, by using the "src" attribute, and not
+        providing a "name". To use the intrinsic icon color also add the
+        "autocolor" attribute.
+      </p>
+      <gwds-grid perrow="6" id="gemini"></gwds-grid>
+    </div>
+
+    <!-- description -->
+    <div id="add-more-icons">
+      <div class="container">
+        <h2 class="h5 tac title">How to add more icons to the library:</h2>
+        <ol class="mb-0">
+          <li>
+            download the icon from
+            <a href="https://fontawesome.com/" target="_blank">font awesome</a>
+            in svg format.
+          </li>
+          <li>
+            clone
+            <a href="https://github.com/genexuslabs/gwds-lit" target="_blank"
+              >gwds repo</a
+            >
+            to your machine.
+          </li>
+          <li>copy the new svg icon to "src/assets/icons".</li>
+          <li>
+            open the terminal, and do "npm run build:rollup". This will build
+            the project with the updated icons folder.
+          </li>
+          <li>push the new changes to the repo.</li>
+        </ol>
+      </div>
+    </div>
+
+    <script>
+      generateIcons = (size = "xs", gridId, gwds = true) => {
+        if (gridId) {
+          let iconsList = [];
+          if (gwds) {
+            iconsList = [
+              "arrow-alt-circle-right",
+              "arrow-alt-circle-down",
+              "arrow-alt-circle-left",
+              "arrow-alt-circle-up",
+              "arrow-alt-down",
+              "arrow-alt-from-bottom",
+              "arrow-alt-from-left",
+              "arrow-alt-from-right",
+              "arrow-alt-from-top",
+              "arrow-alt-left",
+              "arrow-alt-right",
+              "arrow-alt-square-down",
+              "arrow-alt-square-left",
+              "arrow-alt-square-right",
+              "arrow-alt-square-up",
+              "arrow-alt-to-bottom",
+              "arrow-alt-to-left",
+              "arrow-alt-to-right",
+              "arrow-alt-to-top",
+              "arrow-alt-up",
+              "arrow-circle-down",
+              "arrow-circle-left",
+              "arrow-circle-right",
+              "arrow-circle-up",
+              "arrow-down",
+              "arrow-from-bottom",
+              "arrow-from-left",
+              "arrow-from-right",
+              "arrow-from-top",
+              "arrow-left",
+              "arrow-right",
+              "arrow-square-down",
+              "arrow-square-left",
+              "arrow-square-right",
+              "arrow-square-up",
+              "arrow-to-bottom",
+              "arrow-to-left",
+              "arrow-to-right",
+              "arrow-to-top",
+              "arrow-up",
+              "arrows-alt-h",
+              "arrows-alt-v",
+              "arrows-alt",
+              "arrows-h",
+              "arrows-v",
+              "arrows",
+              "chevron-circle-down",
+              "chevron-circle-left",
+              "chevron-circle-right",
+              "chevron-circle-up",
+              "chevron-double-down",
+              "chevron-double-left",
+              "chevron-double-right",
+              "chevron-double-up",
+              "chevron-down",
+              "chevron-left",
+              "chevron-right",
+              "chevron-square-down",
+              "chevron-square-left",
+              "chevron-square-right",
+              "chevron-square-up",
+              "chevron-up",
+              "facebook-square",
+              "globe-africa",
+              "globe-americas",
+              "globe-asia",
+              "globe-europe",
+              "globe",
+              "instagram",
+              "language",
+              "link-solid",
+              "linkedin",
+              "stack-overflow",
+              "times",
+              "twitter",
+              "youtube"
+            ];
+          } else {
+            //gemini icons
+            iconsList = [
+              "angular",
+              "customization",
+              "datastore",
+              "environment-select",
+              "java",
+              "knowledge-base",
+              "mysql",
+              "oracle",
+              "patterns",
+              "sap-hana",
+              "services",
+              "swift"
+            ];
+          }
+
+          const grid = document.getElementById(gridId);
+          if (grid) {
+            if (iconsList.length) {
+              iconsList.sort().map(iconName => {
+                //.icon-container
+                const iconContainer = document.createElement("div");
+                iconContainer.classList.add("icon-container");
+                //.gwds-icon
+                const icon = document.createElement("gwds-icon");
+                icon.setAttribute("size", size);
+                if (gwds) {
+                  //gwds icons.
+                  icon.setAttribute("name", `${iconName}`);
+                } else {
+                  //icons outside gwds (gemini as an example). just provide the src.
+                  icon.setAttribute(
+                    "src",
+                    `./assets/icons-gemini/${iconName}.svg`
+                  );
+                  icon.setAttribute("autocolor", "");
+                  //src
+                }
+                //.name
+                const name = document.createElement("span");
+                name.classList.add("name");
+                name.innerText = iconName;
+                //append
+                iconContainer.appendChild(icon);
+                iconContainer.appendChild(name);
+                grid.appendChild(iconContainer);
+              });
+            }
+          }
+        }
+      };
+      generateIcons("xs", "xs", true);
+      generateIcons("s", "s", true);
+      generateIcons("m", "m", true);
+      generateIcons("m", "gemini", false);
+    </script>
+  </body>
+</html>

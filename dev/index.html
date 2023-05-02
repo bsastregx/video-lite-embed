@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../src/styles/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Monoton&display=swap"
+      rel="stylesheet"
+    />
+    <title>GWDS Components</title>
+    <style>
+      body {
+        margin: 1rem;
+        background-color: var(--gwds__color--dark-900);
+        color: var(--gwds__color--dark-300);
+      }
+      .title {
+        margin-bottom: 0;
+        margin-top: var(--gwds__space--m);
+      }
+      .container {
+        text-align: center;
+      }
+      .list {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-auto-rows: 1fr;
+        grid-gap: var(--gwds__space--xs);
+        margin-top: var(--gwds__space--m);
+        font-weight: var(--gwds__font-weight--regular);
+      }
+      .list li a {
+        display: block;
+        border-radius: var(--gwds__radius--xxs);
+        border: 1px solid var(--gwds__color--dark-700);
+        padding: var(--gwds__space--s);
+        text-decoration: none;
+        color: var(--gwds__color--violet-300);
+        border: 1px solid var(--gwds__color--violet-500);
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .list li a:hover {
+        background-color: var(--gwds__color--violet-500);
+        color: var(--gwds__color--white);
+      }
+      .list li a:visited {
+        color: var(--gwds__color--dark-700);
+        border-color: var(--gwds__color--dark-700);
+      }
+      .list li a:visited:hover {
+        color: var(--gwds__color--white);
+        border-color: var(--gwds__color--dark-700);
+        background-color: var(--gwds__color--dark-800);
+      }
+      .hide {
+        display: none;
+      }
+      /*responsive*/
+      @media screen and (max-width: 1200px) {
+        .list {
+          grid-template-columns: repeat(4, 1fr);
+        }
+      }
+      @media screen and (max-width: 991px) {
+        .list {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+      @media screen and (max-width: 768px) {
+        .list {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media screen and (max-width: 480px) {
+        .list {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
+    </style>
+    <script>
+      //Components
+      const completed = [
+        'general',
+        'headings',
+        'contact-box',
+        'grid',
+        'blocks',
+        'button',
+        'button-host',
+        'cards',
+        'accordion',
+        'avatar',
+        'hero',
+        'learn-more',
+        'logos',
+        'look-at-me',
+        'pills',
+        'slider',
+        'video-section',
+        'play-me',
+        'tile-grid',
+        'list',
+        'testimonial',
+        'good-news',
+        'good-news-section',
+        'read-me',
+        'full-stack',
+        'header',
+        'menu',
+        'video-lite',
+      ];
+
+      const inProgress = ['sub-menu', 'plans'];
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title h2">GWDS Web Components</h1>
+      <p>GWDS: GeneXus Web Design System</p>
+      <h2 class="title h4">Completed:</h2>
+      <ul class="list unstyled" id="completedUl">
+        <!-- populated dinamically with javascript -->
+      </ul>
+    </div>
+
+    <div class="container">
+      <h2 class="title h4">In progress:</h2>
+      <ul class="list unstyled in-progress" id="inProgressUl">
+        <!-- populated dinamically with javascript -->
+      </ul>
+    </div>
+  </body>
+
+  <script>
+    //Completed
+    const completedUl = document.getElementById('completedUl');
+    completed.sort().forEach((el) => {
+      const li = document.createElement('li');
+      const a = document.createElement('a');
+      a.setAttribute('href', `${el}.html`);
+      a.innerText = el;
+      li.appendChild(a);
+      completedUl.appendChild(li);
+    });
+
+    //In Progress
+    const inProgressUl = document.getElementById('inProgressUl');
+    inProgress.sort().forEach((el) => {
+      const li = document.createElement('li');
+      const a = document.createElement('a');
+      a.setAttribute('href', `${el}.html`);
+      a.innerText = el;
+      li.appendChild(a);
+      inProgressUl.appendChild(li);
+    });
+  </script>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Full Stack</title>
+    <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="../node_modules/lit/polyfill-support.js"></script>
+    <script
+      type="module"
+      src="../components/full-stack/gwds-full-stack-section.js"
+    ></script>
+    <script
+      type="module"
+      src="../components/component-title/gwds-component-title.js"
+    ></script>
+    <link rel="stylesheet" href="../src/styles/styles.css" />
+    <style></style>
+  </head>
+  <body>
+    <gwds-component-title label="gwds-full-stack-section properties" props>
+      bgcolor: string | undefined = undefined; <br />
+      iconsrc: string | undefined = undefined; <br />
+      iconsize: 's' | 'm' | 'l' = 'm'; <br />
+      pretitle: string | undefined = undefined; <br />
+      maintitle: string | undefined = undefined; <br />
+      description: string | undefined = undefined; <br />
+      pt0: boolean = false <br />
+      pb0: boolean = false <br />
+      alternate: boolean = false <br />
+      slot -> gwds-full-stack(s) <br />
+      slot="description" -> description as slotted content
+    </gwds-component-title>
+    <gwds-component-title label="gwds-full-stack properties" props>
+      maintitle: string | undefined = undefined; <br />
+      description: string | undefined = undefined; <br />
+      imgsrc: string | undefined = undefined; <br />
+      imgalt: string | undefined = undefined; <br />
+      linklabel: string | undefined = undefined; <br />
+      linktarget: '_blank' | '_self' = '_self'; <br />
+      alternate: boolean = false <br />
+      slot="description" -> description as slotted content
+    </gwds-component-title>
+
+    <!-- light background -->
+    <gwds-component-title label="gwds-blocks (default)"></gwds-component-title>
+    <gwds-full-stack-section
+      iconsrc="./assets/images/other/dummy-icon.png"
+      pretitle="Pre-title"
+      maintitle="This is the main title"
+      linklabel="more info"
+      linkurl="https://www.google.com"
+    >
+      <gwds-full-stack
+        maintitle="Stackoverflow"
+        linklabel="more info"
+        linkurl="https://www.google.com"
+        imgsrc="./assets/images/other/dummy.png"
+        imgalt="dummy image"
+      >
+      </gwds-full-stack>
+      <gwds-full-stack
+        maintitle="Stackoverflow"
+        linklabel="more info"
+        linkurl="https://www.google.com"
+        imgsrc="./assets/images/other/dummy.png"
+        imgalt="dummy image"
+      >
+        <p slot="description">
+          Chameleons or chamaeleons (family Chamaeleonidae) are a distinctive
+          and highly specialized clade of Old World lizards with 202 species
+          described as of June 2015.
+        </p>
+      </gwds-full-stack>
+      <gwds-full-stack
+        maintitle="Stackoverflow"
+        linklabel="more info"
+        linkurl="https://www.google.com"
+        imgsrc="./assets/images/other/dummy.png"
+        imgalt="dummy image"
+      >
+        <p slot="description">
+          Chameleons or chamaeleons (family Chamaeleonidae) are a distinctive
+          and highly specialized clade of Old World lizards with 202 species
+          described as of June 2015.
+        </p>
+      </gwds-full-stack>
+    </gwds-full-stack-section>
+
+    <!-- dark background -->
+    <gwds-full-stack-section
+      iconsrc="./assets/images/other/dummy-icon.png"
+      pretitle="Pre-title"
+      maintitle="This is the main title"
+      linklabel="more info"
+      linkurl="https://www.google.com"
+      bgcolor="dark-900"
+    >
+      <p slot="description">
+        Chameleons or chamaeleons (family Chamaeleonidae) are a distinctive and
+        highly specialized clade of Old World lizards with 202 species described
+        as of June 2015.
+      </p>
+      <gwds-full-stack
+        maintitle="Stackoverflow"
+        linklabel="more info"
+        linkurl="https://www.google.com"
+        imgsrc="./assets/images/other/dummy.png"
+        imgalt="dummy image"
+      >
+      </gwds-full-stack>
+      <gwds-full-stack
+        maintitle="Stackoverflow"
+        linklabel="more info"
+        linkurl="https://www.google.com"
+        imgsrc="./assets/images/other/dummy.png"
+        imgalt="dummy image"
+      >
+        <p slot="description">
+          Chameleons or chamaeleons (family Chamaeleonidae) are a distinctive
+          and highly specialized clade of Old World lizards with 202 species
+          described as of June 2015.
+        </p>
+      </gwds-full-stack>
+      <gwds-full-stack
+        maintitle="Stackoverflow"
+        linklabel="more info"
+        linkurl="https://www.google.com"
+        imgsrc="./assets/images/other/dummy.png"
+        imgalt="dummy image"
+      >
+        <p slot="description">
+          Chameleons or chamaeleons (family Chamaeleonidae) are a distinctive
+          and highly specialized clade of Old World lizards with 202 species
+          described as of June 2015.
+        </p>
+      </gwds-full-stack>
+    </gwds-full-stack-section>
+
+    <!-- alternate -->
+    <gwds-component-title
+      label="gwds-blocks (alternate)"
+    ></gwds-component-title>
+    <gwds-full-stack-section
+      iconsrc="./assets/images/other/dummy-icon.png"
+      pretitle="Pre-title"
+      maintitle="This is the main title"
+      linklabel="more info"
+      linkurl="https://www.google.com"
+      alternate
+    >
+      <p slot="description">
+        Chameleons or chamaeleons (family Chamaeleonidae) are a distinctive and
+        highly specialized clade of Old World lizards with 202 species described
+        as of June 2015.
+      </p>
+      <gwds-full-stack
+        maintitle="Stackoverflow"
+        linklabel="more info"
+        linkurl="https://www.google.com"
+        imgsrc="./assets/images/other/dummy.png"
+        imgalt="dummy image"
+      >
+        <p slot="description">
+          Chameleons or chamaeleons (family Chamaeleonidae) are a distinctive
+          and highly specialized clade of Old World lizards with 202 species
+          described as of June 2015.
+        </p>
+      </gwds-full-stack>
+      <gwds-full-stack
+        maintitle="Stackoverflow"
+        linklabel="more info"
+        linkurl="https://www.google.com"
+        imgsrc="./assets/images/other/dummy.png"
+        imgalt="dummy image"
+      >
+        <p slot="description">
+          Chameleons or chamaeleons (family Chamaeleonidae) are a distinctive
+          and highly specialized clade of Old World lizards with 202 species
+          described as of June 2015.
+        </p>
+      </gwds-full-stack>
+      <gwds-full-stack
+        maintitle="Stackoverflow"
+        linklabel="more info"
+        linkurl="https://www.google.com"
+        imgsrc="./assets/images/other/dummy.png"
+        imgalt="dummy image"
+      >
+        <p slot="description">
+          Chameleons or chamaeleons (family Chamaeleonidae) are a distinctive
+          and highly specialized clade of Old World lizards with 202 species
+          described as of June 2015.
+        </p>
+      </gwds-full-stack>
+    </gwds-full-stack-section>
+
+    <script>
+      const description =
+        "With the new version, **GeneXus 18**, it is possible to create new and colossal digital ecosystems, integrate with these in an outsourced way to speed up your solution and build Scalable Mission Critical Applications in a safe, fast and automatic way.";
+      const fullStackSection = document.querySelector(
+        "gwds-full-stack-section"
+      );
+      const fullStack = document.querySelector("gwds-full-stack");
+      fullStackSection.setAttribute("description", description);
+      fullStack.setAttribute("description", description);
+    </script>
+  </body>
+</html>

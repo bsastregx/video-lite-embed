@@ -1,0 +1,48 @@
+:root {
+  //primary
+  --gwds__color--black: rgb(0, 0, 0);
+  --gwds__color--white: #fff;
+  --gwds__color--black-opacity: rgba(0, 0, 0, 0.2);
+  //secondary
+  --gwds__color--dark-900: #1b1f23;
+  --gwds__color--dark-800: #3b4044;
+  --gwds__color--dark-700: #5a5f63;
+  --gwds__color--dark-500: #969ba0;
+  --gwds__color--dark-400: #b5b5b5;
+  --gwds__color--dark-300: #d9d9d9;
+  --gwds__color--dark-200: #eeeeee;
+  --gwds__color--dark-100: #f5f5f5;
+  --gwds__color--green-900: #187c48;
+  --gwds__color--orange-400: #f7694a;
+  --gwds__color--violet-500: #6c48c9;
+  --gwds__color--violet-300: #9a7fda;
+  --gwds__color--blue-400: #696ef2;
+  --gwds__color--blue-800: #1c2b7c;
+  --gwds__color--blue-900: #0f1c61;
+  --gwds__color--turquoise-200: #03e6c3;
+  --gwds__color--purple-400: #a54095;
+  --gwds__color--purple-900: #321e41;
+  --gwds__color--red-200: #ed6465;
+  --gwds__color--red-400: #d9506c;
+  --gwds__color--red-50: #fbddec;
+  //button
+  --gwds__color--fuchsia-500: #fa3263;
+  --gwds__color--fuchsia-700: #d2285d;
+  //background-tag
+  --gwds__color--violet-50: #eee9f8;
+  --gwds__color--blue-50: #ebebfe;
+  --gwds__color--orange-50: #f9e8e7;
+  --gwds__color--green-50: #e9faf0;
+
+  //LIVE 2022
+  --live-2022__color--yellow: #ffcd41;
+  --live-2022__color--red: #ff8577;
+  --live-2022__color--gray: #f1f2f2;
+  --live-2022__color--purple: #ae8dff;
+  --live-2022__color--blue: #71a8ff;
+  --live-2022__color--green: #41ceb3;
+  --live-2022__color--black: #000000;
+
+  //Other
+  --gwds__color--highlighted: var(--gwds__color--fuchsia-500);
+}

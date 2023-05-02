@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Look at me</title>
+    <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="../node_modules/lit/polyfill-support.js"></script>
+    <script
+      type="module"
+      src="../components/look-at-me/gwds-look-at-me.js"
+    ></script>
+    <script
+      type="module"
+      src="../components/component-title/gwds-component-title.js"
+    ></script>
+    <link rel="stylesheet" href="../src/styles/styles.css" />
+    <style></style>
+  </head>
+  <body>
+    <gwds-component-title label="gwds-look-at-me properties" props>
+      bgcolor: string = 'white'; <br />
+      iconsrc: string | undefined = undefined; <br />
+      iconsize: 's' | 'm' | 'l' = 'm'; <br />
+      pretitle: string | undefined = undefined; <br />
+      maintitle: string | undefined = undefined; <br />
+      description: string | undefined = undefined; <br />
+      pt0: boolean = false; //padding-top:0 <br />
+      pb0: boolean = false; //padding-bottom:0 <br />
+      aligncontent: 'left' | 'center' | 'right' = 'left'; <br />
+      bgimage: string | undefined = undefined; <br />
+      bgsize: string = '1600px'; <br />
+      linklabel: string | undefined = undefined; <br />
+      linkurl: string | undefined = undefined; <br />
+      linktarget: '_blank' | '_self' = '_self'; <br />
+      firstbuttonlabel: string | undefined = undefined; <br />
+      firstbuttonurl: string | undefined = undefined; <br />
+      firstbuttontype: 'primary' | 'secondary' | 'tertiary' = 'primary'; <br />
+      firstbuttontarget: '_blank' | '_self' = '_self'; <br />
+      secondbuttonlabel: string | undefined = undefined; <br />
+      secondbuttonurl: string | undefined = undefined; <br />
+      secondbuttontype: 'primary' | 'secondary' | 'tertiary' = 'secondary';<br />
+      secondbuttontarget: '_blank' | '_self' = '_self'; <br />
+      thirdbuttonlabel: string | undefined = undefined; <br />
+      thirdbuttonurl: string | undefined = undefined; <br />
+      thirdbuttontype: 'primary' | 'secondary' | 'tertiary' = 'tertiary'; <br />
+      thirdbuttontarget: '_blank' | '_self' = '_self'; <br />
+      slot="description" -> description as slotted content
+    </gwds-component-title>
+
+    <!-- align content left -->
+    <gwds-component-title
+      label="gwds-look-at-me (aligncontent: left)"
+    ></gwds-component-title>
+    <gwds-look-at-me
+      iconsrc="./assets/images/other/dummy-icon.png"
+      pretitle="Pre-title"
+      maintitle="Meet Our Academic Program Partner"
+      aligncontent="left"
+      bgcolor="violet-500"
+      bgimage="./assets/images/gwds__look-at-me-right-img.svg"
+      firstbuttonlabel="Buy GeneXus"
+      firstbuttonurl="http://www.google.com"
+      secondbuttonlabel="Contact Sales"
+      secondbuttonurl="http://www.google.com"
+      thirdbuttonlabel="Get a Refund"
+      thirdbuttonurl="http://www.google.com"
+      linklabel="Buy GeneXus"
+      linkurl="http://www.google.com"
+    ></gwds-look-at-me>
+
+    <!-- align content center -->
+    <gwds-component-title
+      label="gwds-look-at-me (aligncontent: center)"
+    ></gwds-component-title>
+    <gwds-look-at-me
+      iconsrc="./assets/images/other/dummy-icon.png"
+      pretitle="Pre-title"
+      maintitle="Meet Our Academic Program Partner"
+      aligncontent="center"
+      bgcolor="green-900"
+      bgimage="./assets/images/gwds__look-at-me-right-img.svg"
+      firstbuttonlabel="Buy GeneXus"
+      firstbuttonurl="http://www.google.com"
+      secondbuttonlabel="Contact Sales"
+      secondbuttonurl="http://www.google.com"
+      thirdbuttonlabel="Get a Refund"
+      thirdbuttonurl="http://www.google.com"
+      linklabel="Buy GeneXus"
+      linkurl="http://www.google.com"
+    >
+      <p slot="description">
+        With the new version, **GeneXus 18**, it is possible to create new and
+        colossal digital ecosystems, integrate with these in an outsourced way
+        to speed up your solution and build Scalable Mission Critical
+        Applications in a safe, fast and automatic way.
+      </p>
+    </gwds-look-at-me>
+
+    <!-- align content right -->
+    <gwds-component-title
+      label="gwds-look-at-me (aligncontent: right)"
+    ></gwds-component-title>
+    <gwds-look-at-me
+      iconsrc="./assets/images/other/dummy-icon.png"
+      pretitle="Pre-title"
+      maintitle="Meet Our Academic Program Partner"
+      aligncontent="right"
+      bgcolor="blue-50"
+      bgimage="./assets/images/gwds__look-at-me-left-img.svg"
+      firstbuttonlabel="Buy GeneXus"
+      firstbuttonurl="http://www.google.com"
+      secondbuttonlabel="Contact Sales"
+      secondbuttonurl="http://www.google.com"
+      thirdbuttonlabel="Get a Refund"
+      thirdbuttonurl="http://www.google.com"
+      linklabel="Buy GeneXus"
+      linkurl="http://www.google.com"
+    >
+      <p slot="description">
+        With the new version, **GeneXus 18**, it is possible to create new and
+        colossal digital ecosystems, integrate with these in an outsourced way
+        to speed up your solution and build Scalable Mission Critical
+        Applications in a safe, fast and automatic way.
+      </p></gwds-look-at-me
+    >
+
+    <gwds-component-title
+      label="Built with Lit"
+      imgsrc="./assets/images/logos/lit.svg"
+      center
+      noarrow
+    ></gwds-component-title>
+
+    <script>
+      const description =
+        "With the new version, **GeneXus 18**, it is possible to create new and colossal digital ecosystems, integrate with these in an outsourced way to speed up your solution and build Scalable Mission Critical Applications in a safe, fast and automatic way.";
+      const firstLookAtMe = document.querySelector("gwds-look-at-me");
+      firstLookAtMe.setAttribute("description", description);
+    </script>
+  </body>
+</html>

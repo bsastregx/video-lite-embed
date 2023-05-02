@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Test</title>
+    <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="../node_modules/lit/polyfill-support.js"></script>
+    <script
+      type="module"
+      src="../components/contact-box/gwds-contact-box.js"
+    ></script>
+    <script
+      type="module"
+      src="../components/component-title/gwds-component-title.js"
+    ></script>
+    <link rel="stylesheet" href="../src/styles/styles.css" />
+    <style></style>
+  </head>
+  <body>
+    <gwds-component-title label="gwds-contact-box properties" props>
+      bgcolor: string = 'white'; <br />
+      iconsrc: string | undefined = undefined; <br />
+      iconsize: 's' | 'm' | 'l' = 'm'; <br />
+      pretitle: string | undefined = undefined; <br />
+      maintitle: string | undefined = undefined; <br />
+      description: string | undefined = undefined; <br />
+      pt0: boolean = false; //padding-top:0 <br />
+      pb0: boolean = false; //padding-bottom:0 <br />
+      avatarimgsrc: string | undefined = undefined <br />
+      avatarimgalt: string | undefined = undefined <br />
+      content: string | undefined = undefined <br />
+      hubspot: boolean = false <br />
+    </gwds-component-title>
+
+    <!-- light theme -->
+    <gwds-contact-box
+      iconsrc="./assets/images/other/dummy-icon.png"
+      iconsize="m"
+      pretitle="Pre title"
+      maintitle="Analía can help you"
+      avatarimgsrc="./assets/images/avatars/analia.svg"
+      avatarimgalt="elvis"
+      hubspot
+      id="contact-box-1"
+    >
+      <p slot="description">
+        Chameleons or chamaeleons (family Chamaeleonidae) are a distinctive and
+        highly specialized clade of Old World lizards with 202 species described
+        as of June 2015.
+      </p>
+    </gwds-contact-box>
+
+    <script>
+      const contactBox1 = document.querySelector("#contact-box-1");
+      contactBox1.content = `<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"><\/script>
+<script>
+  hbspt.forms.create({
+    region: "na1",
+    portalId: "6302527",
+    formId: "4e31c20a-0664-4d74-8eef-995f66faf2df"
+  });
+<\/script>`;
+    </script>
+
+    <!-- dark theme -->
+    <gwds-contact-box
+      iconsrc="./assets/images/other/dummy-icon.png"
+      pretitle="Pre title"
+      maintitle="Analía can help you"
+      description="Contact Analía to get more information about GeneXus"
+      avatarimgsrc="./assets/images/avatars/analia.svg"
+      avatarimgalt="elvis"
+      hubspot
+      bgcolor="dark-900"
+      id="contact-box-2"
+    >
+    </gwds-contact-box>
+
+    <gwds-component-title
+      label="Built with Lit"
+      imgsrc="./assets/images/logos/lit.svg"
+      center
+      noarrow
+    ></gwds-component-title>
+
+    <script>
+      const contactBox2 = document.querySelector("#contact-box-2");
+      contactBox2.content = `<!--[if lte IE 8]>
+<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"><\/script>
+<![endif]--><script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"><\/script><script>
+  hbspt.forms.create({
+region: "na1",
+portalId: "6302527",
+formId: "02631b72-7ed4-4ff8-8c78-9976de43cb43"
+});
+<\/script>
+`;
+    </script>
+  </body>
+</html>

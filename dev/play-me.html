@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Play Me</title>
+    <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="../node_modules/lit/polyfill-support.js"></script>
+    <script type="module" src="../components/play-me/gwds-play-me.js"></script>
+    <script
+      type="module"
+      src="../components/component-title/gwds-component-title.js"
+    ></script>
+    <link rel="stylesheet" href="../src/styles/styles.css" />
+    <style></style>
+  </head>
+  <body>
+    <gwds-component-title label="gwds-play-me properties" props>
+      bgcolor: string = 'white'; <br />
+      maintitle: string | undefined = undefined; <br />
+      linklabel: string | undefined = undefined; <br />
+      linksrc: string | undefined = undefined; <br />
+      linktarget: '_blank' | '_self' = '_self'; <br />
+      slider: boolean = false; <br />
+      perslide: '5' | '3' = '3'; <br />
+    </gwds-component-title>
+
+    <gwds-component-title
+      label="gwds-play-me (grid default)"
+    ></gwds-component-title>
+    <!-- light background -->
+    <gwds-play-me
+      maintitle="Sub-title"
+      linklabel="See all"
+      linksrc="http://www.google.com"
+    >
+      <gwds-video
+        bgcolor="--live-2022__color--yellow"
+        iconsrc="./assets/images/other/dummy-icon.png"
+        avatarsrc="./assets/images/avatars/gisella.jpeg"
+        videotitle="Video Title"
+        author="Author"
+        date="2023-02-07"
+        pageurl="http://www.google.com"
+      ></gwds-video>
+      <gwds-video
+        bgcolor="--live-2022__color--red"
+        iconsrc="./assets/images/other/dummy-icon.png"
+        avatarsrc="./assets/images/avatars/gisella.jpeg"
+        videotitle="Video Title"
+        author="Author"
+        date="2023-02-07"
+        pageurl="http://www.google.com"
+      ></gwds-video>
+      <gwds-video
+        bgcolor="--live-2022__color--gray"
+        iconsrc="./assets/images/other/dummy-icon.png"
+        avatarsrc="./assets/images/avatars/gisella.jpeg"
+        videotitle="Video Title"
+        author="Author"
+        date="2023-02-07"
+        pageurl="http://www.google.com"
+      ></gwds-video>
+      <gwds-video
+        bgcolor="--live-2022__color--purple"
+        iconsrc="./assets/images/other/dummy-icon.png"
+        avatarsrc="./assets/images/avatars/gisella.jpeg"
+        videotitle="Video Title"
+        author="Author"
+        date="2023-02-07"
+        pageurl="http://www.google.com"
+      ></gwds-video>
+      <gwds-video
+        bgcolor="--live-2022__color--blue"
+        iconsrc="./assets/images/other/dummy-icon.png"
+        avatarsrc="./assets/images/avatars/gisella.jpeg"
+        videotitle="Video Title"
+        author="Author"
+        date="2023-02-07"
+        pageurl="http://www.google.com"
+      ></gwds-video>
+      <gwds-video
+        bgcolor="--live-2022__color--green"
+        iconsrc="./assets/images/other/dummy-icon.png"
+        avatarsrc="./assets/images/avatars/gisella.jpeg"
+        videotitle="Video Title"
+        author="Author"
+        date="2023-02-07"
+        pageurl="http://www.google.com"
+      ></gwds-video>
+    </gwds-play-me>
+
+    <gwds-component-title
+      label="gwds-play-me (grid fullwidth)"
+    ></gwds-component-title>
+    <!-- dark background -->
+    <gwds-play-me
+      maintitle="Sub-title"
+      linklabel="See all"
+      linksrc="http://www.google.com"
+      fullwidth
+      bgcolor="dark-900"
+    >
+      <gwds-video
+        bgcolor="--live-2022__color--yellow"
+        iconsrc="./assets/images/other/dummy-icon.png"
+        avatarsrc="./assets/images/avatars/gisella.jpeg"
+        videotitle="Video Title"
+        author="Author"
+        date="2023-02-07"
+        pageurl="http://www.google.com"
+      ></gwds-video>
+      <gwds-video
+        bgcolor="--live-2022__color--red"
+        iconsrc="./assets/images/other/dummy-icon.png"
+        avatarsrc="./assets/images/avatars/gisella.jpeg"
+        videotitle="Video Title"
+        author="Author"
+        date="2023-02-07"
+        pageurl="http://www.google.com"
+      ></gwds-video>
+      <gwds-video
+        bgcolor="--live-2022__color--gray"
+        iconsrc="./assets/images/other/dummy-icon.png"
+        avatarsrc="./assets/images/avatars/gisella.jpeg"
+        videotitle="Video Title"
+        author="Author"
+        date="2023-02-07"
+        pageurl="http://www.google.com"
+      ></gwds-video>
+      <gwds-video
+        bgcolor="--live-2022__color--purple"
+        iconsrc="./assets/images/other/dummy-icon.png"
+        avatarsrc="./assets/images/avatars/gisella.jpeg"
+        videotitle="Video Title"
+        author="Author"
+        date="2023-02-07"
+        pageurl="http://www.google.com"
+      ></gwds-video>
+      <gwds-video
+        bgcolor="--live-2022__color--blue"
+        iconsrc="./assets/images/other/dummy-icon.png"
+        avatarsrc="./assets/images/avatars/gisella.jpeg"
+        videotitle="Video Title"
+        author="Author"
+        date="2023-02-07"
+        pageurl="http://www.google.com"
+      ></gwds-video>
+      <gwds-video
+        bgcolor="--live-2022__color--green"
+        iconsrc="./assets/images/other/dummy-icon.png"
+        avatarsrc="./assets/images/avatars/gisella.jpeg"
+        videotitle="Video Title"
+        author="Author"
+        date="2023-02-07"
+        pageurl="http://www.google.com"
+      ></gwds-video>
+    </gwds-play-me>
+
+    <gwds-component-title
+      label="gwds-play-me (slider : 3)"
+    ></gwds-component-title>
+    <!-- light background -->
+    <gwds-play-me
+      maintitle="Sub-title"
+      linklabel="See all"
+      linksrc="http://www.google.com"
+      slider
+    >
+      <gwds-video
+        bgcolor="--live-2022__color--yellow"
+        iconsrc="./assets/images/other/dummy-icon.png"
+        avatarsrc="./assets/images/avatars/gisella.jpeg"
+        videotitle="Video Title"
+        author="Author"
+        date="2023-02-07"
+        pageurl="http://www.google.com"
+      ></gwds-video>
+      <gwds-video
+        bgcolor="--live-2022__color--red"
+        iconsrc="./assets/images/other/dummy-icon.png"
+        avatarsrc="./assets/images/avatars/gisella.jpeg"
+        videotitle="Video Title"
+        author="Author"
+        date="2023-02-07"
+        pageurl="http://www.google.com"
+      ></gwds-video>
+      <gwds-video
+        bgcolor="--live-2022__color--gray"
+        iconsrc="./assets/images/other/dummy-icon.png"
+        avatarsrc="./assets/images/avatars/gisella.jpeg"
+        videotitle="Video Title"
+        author="Author"
+        date="2023-02-07"
+        pageurl="http://www.google.com"
+      ></gwds-video>
+      <gwds-video
+        bgcolor="--live-2022__color--purple"
+        iconsrc="./assets/images/other/dummy-icon.png"
+        avatarsrc="./assets/images/avatars/gisella.jpeg"
+        videotitle="Video Title"
+        author="Author"
+        date="2023-02-07"
+        pageurl="http://www.google.com"
+      ></gwds-video>
+      <gwds-video
+        bgcolor="--live-2022__color--blue"
+        iconsrc="./assets/images/other/dummy-icon.png"
+        avatarsrc="./assets/images/avatars/gisella.jpeg"
+        videotitle="Video Title"
+        author="Author"
+        date="2023-02-07"
+        pageurl="http://www.google.com"
+      ></gwds-video>
+      <gwds-video
+        bgcolor="--live-2022__color--green"
+        iconsrc="./assets/images/other/dummy-icon.png"
+        avatarsrc="./assets/images/avatars/gisella.jpeg"
+        videotitle="Video Title"
+        author="Author"
+        date="2023-02-07"
+        pageurl="http://www.google.com"
+      ></gwds-video>
+    </gwds-play-me>
+
+    <gwds-component-title
+      label="gwds-play-me (slider : 5)"
+    ></gwds-component-title>
+    <!-- light background -->
+    <gwds-play-me
+      maintitle="Sub-title"
+      linklabel="See all"
+      linksrc="http://www.google.com"
+      slider
+      perslide="5"
+    >
+      <gwds-video
+        bgcolor="--live-2022__color--yellow"
+        iconsrc="./assets/images/other/dummy-icon.png"
+        videotitle="Video Title"
+        author="Author"
+        date="2023-02-07"
+        pageurl="http://www.google.com"
+      ></gwds-video>
+      <gwds-video
+        bgcolor="--live-2022__color--red"
+        iconsrc="./assets/images/other/dummy-icon.png"
+        videotitle="Video Title"
+        author="Author"
+        date="2023-02-07"
+        pageurl="http://www.google.com"
+      ></gwds-video>
+      <gwds-video
+        bgcolor="--live-2022__color--gray"
+        iconsrc="./assets/images/other/dummy-icon.png"
+        videotitle="Video Title"
+        author="Author"
+        date="2023-02-07"
+        pageurl="http://www.google.com"
+      ></gwds-video>
+      <gwds-video
+        bgcolor="--live-2022__color--purple"
+        iconsrc="./assets/images/other/dummy-icon.png"
+        videotitle="Video Title"
+        author="Author"
+        date="2023-02-07"
+        pageurl="http://www.google.com"
+      ></gwds-video>
+      <gwds-video
+        bgcolor="--live-2022__color--blue"
+        iconsrc="./assets/images/other/dummy-icon.png"
+        videotitle="Video Title"
+        author="Author"
+        date="2023-02-07"
+        pageurl="http://www.google.com"
+      ></gwds-video>
+      <gwds-video
+        bgcolor="--live-2022__color--green"
+        iconsrc="./assets/images/other/dummy-icon.png"
+        videotitle="Video Title"
+        author="Author"
+        date="2023-02-07"
+        pageurl="http://www.google.com"
+      ></gwds-video>
+    </gwds-play-me>
+
+    <gwds-component-title
+      label="gwds-play-me (slider fullwidth)"
+    ></gwds-component-title>
+    <gwds-play-me
+      maintitle="Sub-title"
+      linklabel="See all"
+      linksrc="http://www.google.com"
+      slider
+      perslide="5"
+      fullwidth
+      bgcolor="dark-900"
+    >
+      <gwds-video
+        bgcolor="--live-2022__color--yellow"
+        iconsrc="./assets/images/other/dummy-icon.png"
+        videotitle="Video Title"
+        author="Author"
+        date="2023-02-07"
+        pageurl="http://www.google.com"
+      ></gwds-video>
+      <gwds-video
+        bgcolor="--live-2022__color--red"
+        iconsrc="./assets/images/other/dummy-icon.png"
+        videotitle="Video Title"
+        author="Author"
+        date="2023-02-07"
+        pageurl="http://www.google.com"
+      ></gwds-video>
+      <gwds-video
+        bgcolor="--live-2022__color--gray"
+        iconsrc="./assets/images/other/dummy-icon.png"
+        videotitle="Video Title"
+        author="Author"
+        date="2023-02-07"
+        pageurl="http://www.google.com"
+      ></gwds-video>
+      <gwds-video
+        bgcolor="--live-2022__color--purple"
+        iconsrc="./assets/images/other/dummy-icon.png"
+        videotitle="Video Title"
+        author="Author"
+        date="2023-02-07"
+        pageurl="http://www.google.com"
+      ></gwds-video>
+      <gwds-video
+        bgcolor="--live-2022__color--blue"
+        iconsrc="./assets/images/other/dummy-icon.png"
+        videotitle="Video Title"
+        author="Author"
+        date="2023-02-07"
+        pageurl="http://www.google.com"
+      ></gwds-video>
+      <gwds-video
+        bgcolor="--live-2022__color--green"
+        iconsrc="./assets/images/other/dummy-icon.png"
+        videotitle="Video Title"
+        author="Author"
+        date="2023-02-07"
+        pageurl="http://www.google.com"
+      ></gwds-video>
+    </gwds-play-me>
+  </body>
+</html>

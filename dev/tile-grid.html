@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tile Grid</title>
+    <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="../node_modules/lit/polyfill-support.js"></script>
+    <link rel="stylesheet" href="../src/styles/styles.css" />
+    <script
+      type="module"
+      src="../components/tile-grid/gwds-tile-grid.js"
+    ></script>
+    <script
+      type="module"
+      src="../components/component-title/gwds-component-title.js"
+    ></script>
+  </head>
+  <body>
+    <gwds-component-title label="gwds-tile-grid properties" props>
+      bgcolor: string = 'white'; <br />
+      cardsimgheight: string | undefined = undefined; <br />
+      pretitle: string | undefined = undefined; <br />
+      maintitle: string | undefined = undefined; <br />
+      description: string | undefined = undefined; <br />
+      pt0: boolean = false; //padding-top:0 <br />
+      pb0: boolean = false; //padding-bottom:0 <br />
+      linklabel: string | undefined = undefined; <br />
+      linkurl: string | undefined = undefined; <br />
+      linktarget: '_blank' | '_self' = '_self'; <br />
+      slot -> gwds-card(s) <br />
+      slot="description" -> description as slotted content
+    </gwds-component-title>
+    <gwds-component-title label="gwds-card properties" props>
+      bgcolor: string = 'white'; <br />
+      imgsrc: string | undefined = undefined; <br />
+      imgalt: string | undefined = undefined; <br />
+      imgheight: string = '230px' <br />
+      taglabel: string | undefined = undefined; <br />
+      titlelabel: string | undefined = undefined; <br />
+      description: string | undefined = undefined; <br />
+      linklabel: string | undefined = undefined; <br />
+      linkurl: string | undefined = undefined; <br />
+      linktarget: '_blank' | '_self' = '_self'; <br />
+      noshadow: boolean = false;
+    </gwds-component-title>
+
+    <!-- light backgrtound -->
+    <gwds-tile-grid
+      iconsrc="./assets/images/other/dummy-icon.png"
+      pretitle="Pre-title"
+      maintitle="Meet Our Academic Program Partner"
+      linklabel="More"
+      linkurl="www.google.com"
+    >
+      <gwds-card
+        imgsrc="./assets/images/other/dummy.png"
+        imgalt="some dummy image"
+        titlelabel="Freedom & Accountability"
+        linklabel="more info"
+        linkurl="https://en.wikipedia.org/wiki/Owl"
+        linktarget="_blank"
+        id="gwds-first-card"
+      >
+      </gwds-card>
+      <gwds-card
+        imgsrc="./assets/images/other/dummy.png"
+        imgalt="some dummy image"
+        titlelabel="Respect & Trust"
+        description="The foundations of our organizational culture are based on the pillars of respect and trust. Respect for our differences, styles and opinions allows us to make better decisions. Trust in our teammates allows us to better align our interests, to execute decisions more efficiently."
+        linklabel="more info"
+        linkurl="https://en.wikipedia.org/wiki/Owl"
+        linktarget="_blank"
+      >
+      </gwds-card>
+      <gwds-card
+        imgsrc="./assets/images/other/dummy.png"
+        imgalt="some dummy image"
+        titlelabel="Diversity & Tolerance"
+        description="At GeneXus we promote diversity of ideas and people, as well as of styles and thoughts. The different ways of understanding and living the world and the multiple experiences of each one, allow us to generate more and better ideas and solutions. Diversity, tolerance and respect for our differences are fundamental to working successfully on projects that require constant innovation."
+        linklabel="more info"
+        linkurl="https://en.wikipedia.org/wiki/Owl"
+        linktarget="_blank"
+      >
+      </gwds-card>
+    </gwds-tile-grid>
+
+    <!-- dark background -->
+    <gwds-tile-grid
+      iconsrc="./assets/images/other/dummy-icon.png"
+      pretitle="Pre-title"
+      maintitle="Meet Our Academic Program Partner"
+      linklabel="More"
+      linkurl="www.google.com"
+      bgcolor="dark-900"
+    >
+      <p slot="description">
+        Chameleons or chamaeleons (family Chamaeleonidae) are a distinctive and
+        highly specialized clade of Old World lizards with 202 species described
+        as of June 2015.
+      </p>
+      <gwds-card
+        imgsrc="./assets/images/other/dummy.png"
+        imgalt="some dummy image"
+        titlelabel="Freedom & Accountability"
+        linklabel="more info"
+        linkurl="https://en.wikipedia.org/wiki/Owl"
+        linktarget="_blank"
+        id="gwds-first-card"
+      >
+      </gwds-card>
+      <gwds-card
+        imgsrc="./assets/images/other/dummy.png"
+        imgalt="some dummy image"
+        titlelabel="Respect & Trust"
+        description="The foundations of our organizational culture are based on the pillars of respect and trust. Respect for our differences, styles and opinions allows us to make better decisions. Trust in our teammates allows us to better align our interests, to execute decisions more efficiently."
+        linklabel="more info"
+        linkurl="https://en.wikipedia.org/wiki/Owl"
+        linktarget="_blank"
+      >
+      </gwds-card>
+      <gwds-card
+        imgsrc="./assets/images/other/dummy.png"
+        imgalt="some dummy image"
+        titlelabel="Diversity & Tolerance"
+        description="At GeneXus we promote diversity of ideas and people, as well as of styles and thoughts. The different ways of understanding and living the world and the multiple experiences of each one, allow us to generate more and better ideas and solutions. Diversity, tolerance and respect for our differences are fundamental to working successfully on projects that require constant innovation."
+        linklabel="more info"
+        linkurl="https://en.wikipedia.org/wiki/Owl"
+        linktarget="_blank"
+      >
+      </gwds-card>
+    </gwds-tile-grid>
+
+    <gwds-component-title
+      label="Built with Lit"
+      imgsrc="./assets/images/logos/lit.svg"
+      center
+      noarrow
+    ></gwds-component-title>
+    <script>
+      const description =
+        "With the new version, **GeneXus 18**, it is possible to create new and colossal digital ecosystems, integrate with these in an outsourced way to speed up your solution and build Scalable Mission Critical Applications in a safe, fast and automatic way.";
+      const tileGrid = document.querySelector("gwds-tile-grid");
+      tileGrid.setAttribute("description", description);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Good News</title>
+    <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="../node_modules/lit/polyfill-support.js"></script>
+    <script
+      type="module"
+      src="../components/good-news/gwds-good-news.js"
+    ></script>
+    <script
+      type="module"
+      src="../components/component-title/gwds-component-title.js"
+    ></script>
+    <link rel="stylesheet" href="../src/styles/styles.css" />
+    <style>
+      .box {
+        max-width: 300px;
+        margin: 60px 0;
+      }
+      .box--big {
+        max-width: 600px;
+      }
+      .large {
+        max-width: 940px;
+        margin: 60px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <gwds-component-title label="gwds-good-news properties" props>
+      bgcolor: string = 'white'; <br />
+      imgsrc: string | undefined = undefined; <br />
+      imgalt: string | undefined = undefined; <br />
+      bgcolor: string = 'white'; <br />
+      taglabel: string | undefined = undefined; <br />
+      pretitle: string | undefined = undefined; <br />
+      newstitle: string | undefined = undefined; <br />
+      description: string | undefined = undefined; <br />
+      descriptionlimit: string = '110'; //The limit of the description
+      characters<br />
+      fulldescription: boolean = false; <br />
+      linkurl: string | undefined = undefined; <br />
+      authoravatarsrc: string | undefined = undefined; <br />
+      authorname: string | undefined = undefined; <br />
+      date: date | undefined = undefined; <br />
+      slot="description" -> description as slotted content
+    </gwds-component-title>
+
+    <!-- kind 1 -->
+    <gwds-component-title
+      label="gwds-good-news (kind: 1)"
+    ></gwds-component-title>
+    <div class="container">
+      <div class="box">
+        <gwds-good-news
+          taglabel="tag text"
+          imgsrc="./assets/images/other/dummy.png"
+          imgalt="dummyt image"
+          pretitle="Pre-title"
+          newstitle="Text example with 3 lines, oh yes! I say 3 lines, can you believe it? Thats me!"
+          linkurl="http://www.google.com"
+          authoravatarsrc="./assets/images/avatars/gaston-milano.png"
+          authorname="Gastón Milano"
+          date="2023-02-07"
+          kind="1"
+        >
+        </gwds-good-news>
+      </div>
+    </div>
+
+    <!-- kind 2 -->
+    <gwds-component-title
+      label="gwds-good-news (kind: 2)"
+    ></gwds-component-title>
+    <div class="container">
+      <div class="box box--big">
+        <gwds-good-news
+          taglabel="tag text"
+          imgsrc="./assets/images/other/dummy.png"
+          imgalt="dummyt image"
+          pretitle="Pre-title"
+          newstitle="Text example with 3 lines, oh yes! I say 3 lines, can you believe it? Thats me!"
+          linkurl="http://www.google.com"
+          authoravatarsrc="./assets/images/avatars/gaston-milano.png"
+          authorname="Gastón Milano"
+          date="2023-02-07"
+          kind="2"
+        >
+        </gwds-good-news>
+      </div>
+    </div>
+
+    <!-- kind 3 -->
+    <gwds-component-title
+      label="gwds-good-news (kind: 3)"
+    ></gwds-component-title>
+    <div class="container">
+      <div class="box">
+        <gwds-good-news
+          taglabel="tag text"
+          imgsrc="./assets/images/other/dummy.png"
+          imgalt="dummyt image"
+          pretitle="Pre-title"
+          newstitle="Text example with 3 lines, oh yes! I say 3 lines, can you believe it? Thats me!"
+          linkurl="http://www.google.com"
+          authoravatarsrc="./assets/images/avatars/gaston-milano.png"
+          authorname="Gastón Milano"
+          date="2023-02-07"
+          kind="3"
+        >
+        </gwds-good-news>
+      </div>
+    </div>
+
+    <!-- kind 4 -->
+    <gwds-component-title
+      label="gwds-good-news (kind: 4)"
+    ></gwds-component-title>
+    <div class="container">
+      <div class="box">
+        <gwds-good-news
+          taglabel="tag text"
+          imgsrc="./assets/images/other/dummy.png"
+          imgalt="dummyt image"
+          pretitle="Pre-title"
+          newstitle="Text example with 3 lines, oh yes! I say 3 lines, can you believe it? Thats me!"
+          linkurl="http://www.google.com"
+          authoravatarsrc="./assets/images/avatars/gaston-milano.png"
+          authorname="Gastón Milano"
+          date="2023-02-07"
+          kind="4"
+        >
+        </gwds-good-news>
+      </div>
+    </div>
+
+    <!-- kind 5 -->
+    <gwds-component-title
+      label="gwds-good-news (kind: 5)"
+    ></gwds-component-title>
+    <div class="container">
+      <div class="large">
+        <gwds-good-news
+          taglabel="tag text"
+          imgsrc="./assets/images/other/dummy.png"
+          imgalt="dummyt image"
+          pretitle="Pre-title"
+          newstitle="Text example with 3 lines, oh yes! I say 3 lines, can you believe it? Thats me!"
+          linkurl="http://www.google.com"
+          authoravatarsrc="./assets/images/avatars/gaston-milano.png"
+          authorname="Gastón Milano"
+          date="2023-02-07"
+          kind="5"
+        >
+        </gwds-good-news>
+      </div>
+    </div>
+
+    <!-- kind 6 -->
+    <gwds-component-title
+      label="gwds-good-news (kind: 6)"
+    ></gwds-component-title>
+    <div class="container">
+      <div class="large">
+        <gwds-good-news
+          taglabel="tag text"
+          imgsrc="./assets/images/other/dummy.png"
+          imgalt="dummyt image"
+          pretitle="Pre-title"
+          newstitle="Text example with 3 lines, oh yes! I say 3 lines, can you believe it? Thats me!"
+          linkurl="http://www.google.com"
+          authoravatarsrc="./assets/images/avatars/gaston-milano.png"
+          authorname="Gastón Milano"
+          date="2023-02-07"
+          kind="6"
+        >
+        </gwds-good-news>
+      </div>
+    </div>
+
+    <!-- kind 7 -->
+    <gwds-component-title
+      label="gwds-good-news (kind: 7)"
+    ></gwds-component-title>
+    <div class="container">
+      <div class="box">
+        <gwds-good-news
+          taglabel="tag text"
+          imgsrc="./assets/images/other/dummy.png"
+          imgalt="dummyt image"
+          pretitle="Pre-title"
+          newstitle="Text example with 3 lines, oh yes! I say 3 lines, can you believe it? Thats me!"
+          linkurl="http://www.google.com"
+          authoravatarsrc="./assets/images/avatars/gaston-milano.png"
+          authorname="Gastón Milano"
+          date="2023-02-07"
+          kind="7"
+        >
+        </gwds-good-news>
+      </div>
+    </div>
+
+    <script>
+      const description =
+        "With the new version, **GeneXus 18**, it is possible to create new and colossal digital ecosystems, integrate with these in an outsourced way to speed up your solution and build Scalable Mission Critical Applications in a safe, fast and automatic way.";
+      const goodNews = document.querySelectorAll("gwds-good-news");
+      goodNews.forEach((goodNews, i) => {
+        goodNews.setAttribute("description", description);
+      });
+    </script>
+  </body>
+</html>

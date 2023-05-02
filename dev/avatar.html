@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Test</title>
+    <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="../node_modules/lit/polyfill-support.js"></script>
+    <script type="module" src="../components/avatar/gwds-avatar.js"></script>
+    <script type="module" src="../components/grid/gwds-grid.js"></script>
+    <script
+      type="module"
+      src="../components/component-title/gwds-component-title.js"
+    ></script>
+    <link rel="stylesheet" href="../src/styles/styles.css" />
+    <style>
+      .container {
+        padding: 64px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <gwds-component-title label="gwds-avatar properties" props>
+      imgsrc: string | undefined = undefined; <br />
+      imgalt: string | undefined = undefined; <br />
+      size: 'm' | 'l' | 'xl' = 'm'; <br />
+      disableborder: boolean = false <br />
+    </gwds-component-title>
+
+    <!-- default -->
+    <gwds-component-title label="gwds-avatar (default)"></gwds-component-title>
+    <div class="container">
+      <gwds-grid perrow="3">
+        <gwds-avatar
+          size="m"
+          imgsrc="./assets/images/avatars/armin-bachman.png"
+          imgalt="analia"
+        ></gwds-avatar>
+        <gwds-avatar
+          size="l"
+          imgsrc="./assets/images/avatars/armin-bachman.png"
+          imgalt="analia"
+        ></gwds-avatar>
+        <gwds-avatar
+          size="xl"
+          imgsrc="./assets/images/avatars/armin-bachman.png"
+          imgalt="analia"
+        ></gwds-avatar>
+      </gwds-grid>
+    </div>
+    <!-- no border -->
+    <gwds-component-title
+      label="gwds-avatar (disableborder)"
+    ></gwds-component-title>
+    <div class="container">
+      <gwds-grid perrow="3">
+        <gwds-avatar
+          size="m"
+          imgsrc="./assets/images/avatars/armin-bachman.png"
+          imgalt="analia"
+          disableborder
+        ></gwds-avatar>
+        <gwds-avatar
+          size="l"
+          imgsrc="./assets/images/avatars/armin-bachman.png"
+          imgalt="analia"
+          disableborder
+        ></gwds-avatar>
+        <gwds-avatar
+          size="xl"
+          imgsrc="./assets/images/avatars/armin-bachman.png"
+          imgalt="analia"
+          disableborder
+        ></gwds-avatar>
+      </gwds-grid>
+    </div>
+    <gwds-component-title
+      label="Built with Lit"
+      imgsrc="./assets/images/logos/lit.svg"
+      center
+      noarrow
+    ></gwds-component-title>
+  </body>
+</html>

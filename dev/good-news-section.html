@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Good News Section</title>
+    <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="../node_modules/lit/polyfill-support.js"></script>
+    <script
+      type="module"
+      src="../components/good-news/gwds-good-news-section.js"
+    ></script>
+    <script
+      type="module"
+      src="../components/component-title/gwds-component-title.js"
+    ></script>
+    <link rel="stylesheet" href="../src/styles/styles.css" />
+  </head>
+  <body>
+    <gwds-component-title label="gwds-good-news-section properties" props>
+      bgcolor: string = 'white'; <br />
+      maintitle: string | undefined = undefined; <br />
+      linklabel: string | undefined = undefined; <br />
+      linkurl: string | undefined = undefined; <br />
+      linktarget: '_blank' | '_self' = '_self'; <br />
+      description: string | undefined = undefined; <br />
+      pt0: boolean = false; //padding-top:0 <br />
+      pb0: boolean = false; //padding-bottom:0 <br />
+      loadmorelabel: string | undefined = undefined; <br />
+      layout: '1' | '2' | '3' | '4' | '5' | '6' | '7' = '1'; <br />
+      slot -> gwds-good-news <br />
+      slot="description" -> description as slotted content
+    </gwds-component-title>
+    <gwds-component-title label="gwds-good-news properties" props>
+      bgcolor: string | undefined = undefined; <br />
+      imgsrc: string | undefined = undefined; <br />
+      imgalt: string | undefined = undefined; <br />
+      taglabel: string | undefined = undefined; <br />
+      pretitle: string | undefined = undefined; <br />
+      newstitle: string | undefined = undefined; <br />
+      description: string | undefined = undefined; <br />
+      descriptionlimit: string = '110'; //The limit of the description
+      characters<br />
+      fulldescription: boolean = false; <br />
+      linkurl: string | undefined = undefined; <br />
+      authoravatarsrc: string | undefined = undefined; <br />
+      authorname: string | undefined = undefined; <br />
+      date: date | undefined = undefined; <br />
+      kind: '1' | '2' | '3' | '4' | '5' | '6' | '7' = '1'; <br />
+      slot="description" -> description as slotted content
+    </gwds-component-title>
+
+    <!-- layout 1 -->
+    <gwds-component-title
+      label="gwds-good-news-section (layout: 1)"
+    ></gwds-component-title>
+    <gwds-good-news-section
+      maintitle="Text example with 3 lines, oh yes! I say 3 lines, can you believe it? Thats me!"
+      linklabel="Ver todo"
+      linkurl="http://www.google.com"
+      loadmorelabel="Load More"
+      layout="1"
+    >
+      <gwds-good-news
+        taglabel="tag text"
+        imgsrc="./assets/images/other/dummy.png"
+        imgalt="dummyt image"
+        pretitle="Pre-title"
+        newstitle="Text example with 3 lines, oh yes! I say 3 lines, can you believe it? Thats me!"
+        linkurl="http://www.google.com"
+        authoravatarsrc="./assets/images/avatars/gaston-milano.png"
+        authorname="Gastón Milano"
+        date="2023-02-07"
+      >
+      </gwds-good-news>
+      <gwds-good-news
+        taglabel="tag text"
+        imgsrc="./assets/images/other/dummy.png"
+        imgalt="dummyt image"
+        pretitle="Pre-title"
+        newstitle="Text example with 3 lines, oh yes! I say 3 lines, can you believe it? Thats me!"
+        linkurl="http://www.google.com"
+        authoravatarsrc="./assets/images/avatars/gaston-milano.png"
+        authorname="Gastón Milano"
+        date="2023-02-07"
+      >
+      </gwds-good-news>
+      <gwds-good-news
+        taglabel="tag text"
+        imgsrc="./assets/images/other/dummy.png"
+        imgalt="dummyt image"
+        pretitle="Pre-title"
+        newstitle="Text example with 3 lines, oh yes! I say 3 lines, can you believe it? Thats me!"
+        linkurl="http://www.google.com"
+        authoravatarsrc="./assets/images/avatars/gaston-milano.png"
+        authorname="Gastón Milano"
+        date="2023-02-07"
+      >
+      </gwds-good-news>
+      <gwds-good-news
+        taglabel="tag text"
+        imgsrc="./assets/images/other/dummy.png"
+        imgalt="dummyt image"
+        pretitle="Pre-title"
+        newstitle="Text example with 3 lines, oh yes! I say 3 lines, can you believe it? Thats me!"
+        linkurl="http://www.google.com"
+        authoravatarsrc="./assets/images/avatars/gaston-milano.png"
+        authorname="Gastón Milano"
+        date="2023-02-07"
+      >
+      </gwds-good-news>
+      <gwds-good-news
+        taglabel="tag text"
+        imgsrc="./assets/images/other/dummy.png"
+        imgalt="dummyt image"
+        pretitle="Pre-title"
+        newstitle="Text example with 3 lines, oh yes! I say 3 lines, can you believe it? Thats me!"
+        linkurl="http://www.google.com"
+        authoravatarsrc="./assets/images/avatars/gaston-milano.png"
+        authorname="Gastón Milano"
+        date="2023-02-07"
+      >
+      </gwds-good-news>
+      <gwds-good-news
+        taglabel="tag text"
+        imgsrc="./assets/images/other/dummy.png"
+        imgalt="dummyt image"
+        pretitle="Pre-title"
+        newstitle="Text example with 3 lines, oh yes! I say 3 lines, can you believe it? Thats me!"
+        linkurl="http://www.google.com"
+        authoravatarsrc="./assets/images/avatars/gaston-milano.png"
+        authorname="Gastón Milano"
+        date="2023-02-07"
+      >
+      </gwds-good-news>
+    </gwds-good-news-section>
+
+    <!-- layout 2 -->
+    <gwds-component-title
+      label="gwds-good-news-section (layout: 2)"
+    ></gwds-component-title>
+    <gwds-good-news-section
+      maintitle="Text example with 3 lines, oh yes! I say 3 lines, can you believe it? Thats me!"
+      linklabel="Ver todo"
+      linkurl="http://www.google.com"
+      loadmorelabel="Load More"
+      layout="2"
+    >
+      <gwds-good-news
+        taglabel="tag text"
+        imgsrc="./assets/images/other/dummy.png"
+        imgalt="dummyt image"
+        pretitle="Pre-title"
+        newstitle="Text example with 3 lines, oh yes! I say 3 lines, can you believe it? Thats me!"
+        linkurl="http://www.google.com"
+        authoravatarsrc="./assets/images/avatars/gaston-milano.png"
+        authorname="Gastón Milano"
+        date="2023-02-07"
+      >
+      </gwds-good-news>
+      <gwds-good-news
+        taglabel="tag text"
+        imgsrc="./assets/images/other/dummy.png"
+        imgalt="dummyt image"
+        pretitle="Pre-title"
+        newstitle="Text example with 3 lines, oh yes! I say 3 lines, can you believe it? Thats me!"
+        linkurl="http://www.google.com"
+        authoravatarsrc="./assets/images/avatars/gaston-milano.png"
+        authorname="Gastón Milano"
+        date="2023-02-07"
+      >
+      </gwds-good-news>
+      <gwds-good-news
+        taglabel="tag text"
+        imgsrc="./assets/images/other/dummy.png"
+        imgalt="dummyt image"
+        pretitle="Pre-title"
+        newstitle="Text example with 3 lines, oh yes! I say 3 lines, can you believe it? Thats me!"
+        linkurl="http://www.google.com"
+        authoravatarsrc="./assets/images/avatars/gaston-milano.png"
+        authorname="Gastón Milano"
+        date="2023-02-07"
+      >
+      </gwds-good-news>
+      <gwds-good-news
+        taglabel="tag text"
+        imgsrc="./assets/images/other/dummy.png"
+        imgalt="dummyt image"
+        pretitle="Pre-title"
+        newstitle="Text example with 3 lines, oh yes! I say 3 lines, can you believe it? Thats me!"
+        linkurl="http://www.google.com"
+        authoravatarsrc="./assets/images/avatars/gaston-milano.png"
+        authorname="Gastón Milano"
+        date="2023-02-07"
+      >
+      </gwds-good-news>
+    </gwds-good-news-section>
+
+    <!-- layout 3 -->
+    <gwds-component-title
+      label="gwds-good-news-section (layout: 3)"
+    ></gwds-component-title>
+    <gwds-good-news-section
+      maintitle="Text example with 3 lines, oh yes! I say 3 lines, can you believe it? Thats me!"
+      linklabel="Ver todo"
+      linkurl="http://www.google.com"
+      loadmorelabel="Load More"
+      layout="3"
+    >
+      <gwds-good-news
+        taglabel="tag text"
+        imgsrc="./assets/images/other/dummy.png"
+        imgalt="dummyt image"
+        pretitle="Pre-title"
+        newstitle="Text example with 3 lines, oh yes! I say 3 lines, can you believe it? Thats me!"
+        linkurl="http://www.google.com"
+        authoravatarsrc="./assets/images/avatars/gaston-milano.png"
+        authorname="Gastón Milano"
+        date="2023-02-07"
+      >
+      </gwds-good-news>
+      <gwds-good-news
+        taglabel="tag text"
+        imgsrc="./assets/images/other/dummy.png"
+        imgalt="dummyt image"
+        pretitle="Pre-title"
+        newstitle="Text example with 3 lines, oh yes! I say 3 lines, can you believe it? Thats me!"
+        linkurl="http://www.google.com"
+        authoravatarsrc="./assets/images/avatars/gaston-milano.png"
+        authorname="Gastón Milano"
+        date="2023-02-07"
+      >
+      </gwds-good-news>
+      <gwds-good-news
+        taglabel="tag text"
+        imgsrc="./assets/images/other/dummy.png"
+        imgalt="dummyt image"
+        pretitle="Pre-title"
+        newstitle="Text example with 3 lines, oh yes! I say 3 lines, can you believe it? Thats me!"
+        linkurl="http://www.google.com"
+        authoravatarsrc="./assets/images/avatars/gaston-milano.png"
+        authorname="Gastón Milano"
+        date="2023-02-07"
+      >
+      </gwds-good-news>
+      <gwds-good-news
+        taglabel="tag text"
+        imgsrc="./assets/images/other/dummy.png"
+        imgalt="dummyt image"
+        pretitle="Pre-title"
+        newstitle="Text example with 3 lines, oh yes! I say 3 lines, can you believe it? Thats me!"
+        linkurl="http://www.google.com"
+        authoravatarsrc="./assets/images/avatars/gaston-milano.png"
+        authorname="Gastón Milano"
+        date="2023-02-07"
+      >
+      </gwds-good-news>
+      <gwds-good-news
+        taglabel="tag text"
+        imgsrc="./assets/images/other/dummy.png"
+        imgalt="dummyt image"
+        pretitle="Pre-title"
+        newstitle="Text example with 3 lines, oh yes! I say 3 lines, can you believe it? Thats me!"
+        linkurl="http://www.google.com"
+        authoravatarsrc="./assets/images/avatars/gaston-milano.png"
+        authorname="Gastón Milano"
+        date="2023-02-07"
+      >
+      </gwds-good-news>
+      <gwds-good-news
+        taglabel="tag text"
+        imgsrc="./assets/images/other/dummy.png"
+        imgalt="dummyt image"
+        pretitle="Pre-title"
+        newstitle="Text example with 3 lines, oh yes! I say 3 lines, can you believe it? Thats me!"
+        linkurl="http://www.google.com"
+        authoravatarsrc="./assets/images/avatars/gaston-milano.png"
+        authorname="Gastón Milano"
+        date="2023-02-07"
+      >
+      </gwds-good-news>
+    </gwds-good-news-section>
+
+    <!-- layout 4 -->
+    <gwds-component-title
+      label="gwds-good-news-section (layout: 4)"
+    ></gwds-component-title>
+    <gwds-good-news-section
+      maintitle="Text example with 3 lines, oh yes! I say 3 lines, can you believe it? Thats me!"
+      linklabel="Ver todo"
+      linkurl="http://www.google.com"
+      loadmorelabel="Load More"
+      layout="4"
+    >
+      <gwds-good-news
+        taglabel="tag text"
+        imgsrc="./assets/images/other/dummy.png"
+        imgalt="dummyt image"
+        pretitle="Pre-title"
+        newstitle="Text example with 3 lines, oh yes! I say 3 lines, can you believe it? Thats me!"
+        linkurl="http://www.google.com"
+        authoravatarsrc="./assets/images/avatars/gaston-milano.png"
+        authorname="Gastón Milano"
+        date="2023-02-07"
+      >
+      </gwds-good-news>
+      <gwds-good-news
+        taglabel="tag text"
+        imgsrc="./assets/images/other/dummy.png"
+        imgalt="dummyt image"
+        pretitle="Pre-title"
+        newstitle="Text example with 3 lines, oh yes! I say 3 lines, can you believe it? Thats me!"
+        linkurl="http://www.google.com"
+        authoravatarsrc="./assets/images/avatars/gaston-milano.png"
+        authorname="Gastón Milano"
+        date="2023-02-07"
+      >
+      </gwds-good-news>
+      <gwds-good-news
+        taglabel="tag text"
+        imgsrc="./assets/images/other/dummy.png"
+        imgalt="dummyt image"
+        pretitle="Pre-title"
+        newstitle="Text example with 3 lines, oh yes! I say 3 lines, can you believe it? Thats me!"
+        linkurl="http://www.google.com"
+        authoravatarsrc="./assets/images/avatars/gaston-milano.png"
+        authorname="Gastón Milano"
+        date="2023-02-07"
+      >
+      </gwds-good-news>
+    </gwds-good-news-section>
+
+    <!-- layout 5 -->
+    <gwds-component-title
+      label="gwds-good-news-section (layout: 5)"
+    ></gwds-component-title>
+    <gwds-good-news-section
+      maintitle="Text example with 3 lines, oh yes! I say 3 lines, can you believe it? Thats me!"
+      linklabel="Ver todo"
+      linkurl="http://www.google.com"
+      loadmorelabel="Load More"
+      layout="5"
+    >
+      <gwds-good-news
+        taglabel="tag text"
+        imgsrc="./assets/images/other/dummy.png"
+        imgalt="dummyt image"
+        pretitle="Pre-title"
+        newstitle="Text example with 3 lines, oh yes! I say 3 lines, can you believe it? Thats me!"
+        linkurl="http://www.google.com"
+        authoravatarsrc="./assets/images/avatars/gaston-milano.png"
+        authorname="Gastón Milano"
+        date="2023-02-07"
+      >
+      </gwds-good-news>
+      <gwds-good-news
+        taglabel="tag text"
+        imgsrc="./assets/images/other/dummy.png"
+        imgalt="dummyt image"
+        pretitle="Pre-title"
+        newstitle="Text example with 3 lines, oh yes! I say 3 lines, can you believe it? Thats me!"
+        linkurl="http://www.google.com"
+        authoravatarsrc="./assets/images/avatars/gaston-milano.png"
+        authorname="Gastón Milano"
+        date="2023-02-07"
+      >
+      </gwds-good-news>
+      <gwds-good-news
+        taglabel="tag text"
+        imgsrc="./assets/images/other/dummy.png"
+        imgalt="dummyt image"
+        pretitle="Pre-title"
+        newstitle="Text example with 3 lines, oh yes! I say 3 lines, can you believe it? Thats me!"
+        linkurl="http://www.google.com"
+        authoravatarsrc="./assets/images/avatars/gaston-milano.png"
+        authorname="Gastón Milano"
+        date="2023-02-07"
+      >
+      </gwds-good-news>
+    </gwds-good-news-section>
+
+    <!-- layout 6 -->
+    <gwds-component-title
+      label="gwds-good-news-section (layout: 6)"
+    ></gwds-component-title>
+    <gwds-good-news-section
+      maintitle="Text example with 3 lines, oh yes! I say 3 lines, can you believe it? Thats me!"
+      linklabel="Ver todo"
+      linkurl="http://www.google.com"
+      loadmorelabel="Load More"
+      layout="6"
+    >
+      <gwds-good-news
+        taglabel="tag text"
+        imgsrc="./assets/images/other/dummy.png"
+        imgalt="dummyt image"
+        pretitle="Pre-title"
+        newstitle="Text example with 3 lines, oh yes! I say 3 lines, can you believe it? Thats me!"
+        linkurl="http://www.google.com"
+        authoravatarsrc="./assets/images/avatars/gaston-milano.png"
+        authorname="Gastón Milano"
+        date="2023-02-07"
+      >
+      </gwds-good-news>
+      <gwds-good-news
+        taglabel="tag text"
+        imgsrc="./assets/images/other/dummy.png"
+        imgalt="dummyt image"
+        pretitle="Pre-title"
+        newstitle="Text example with 3 lines, oh yes! I say 3 lines, can you believe it? Thats me!"
+        linkurl="http://www.google.com"
+        authoravatarsrc="./assets/images/avatars/gaston-milano.png"
+        authorname="Gastón Milano"
+        date="2023-02-07"
+      >
+      </gwds-good-news>
+      <gwds-good-news
+        taglabel="tag text"
+        imgsrc="./assets/images/other/dummy.png"
+        imgalt="dummyt image"
+        pretitle="Pre-title"
+        newstitle="Text example with 3 lines, oh yes! I say 3 lines, can you believe it? Thats me!"
+        linkurl="http://www.google.com"
+        authoravatarsrc="./assets/images/avatars/gaston-milano.png"
+        authorname="Gastón Milano"
+        date="2023-02-07"
+      >
+      </gwds-good-news>
+    </gwds-good-news-section>
+
+    <!-- layout 7 -->
+    <gwds-component-title
+      label="gwds-good-news-section (layout: 7)"
+    ></gwds-component-title>
+    <gwds-good-news-section
+      maintitle="Text example with 3 lines, oh yes! I say 3 lines, can you believe it? Thats me!"
+      linklabel="Ver todo"
+      linkurl="http://www.google.com"
+      loadmorelabel="Load More"
+      layout="7"
+    >
+      <gwds-good-news
+        taglabel="tag text"
+        imgsrc="./assets/images/other/dummy.png"
+        imgalt="dummyt image"
+        pretitle="Pre-title"
+        newstitle="Text example with 3 lines, oh yes! I say 3 lines, can you believe it? Thats me!"
+        linkurl="http://www.google.com"
+        authoravatarsrc="./assets/images/avatars/gaston-milano.png"
+        authorname="Gastón Milano"
+        date="2023-02-07"
+      >
+      </gwds-good-news>
+      <gwds-good-news
+        taglabel="tag text"
+        imgsrc="./assets/images/other/dummy.png"
+        imgalt="dummyt image"
+        pretitle="Pre-title"
+        newstitle="Text example with 3 lines, oh yes! I say 3 lines, can you believe it? Thats me!"
+        linkurl="http://www.google.com"
+        authoravatarsrc="./assets/images/avatars/gaston-milano.png"
+        authorname="Gastón Milano"
+        date="2023-02-07"
+      >
+      </gwds-good-news>
+      <gwds-good-news
+        taglabel="tag text"
+        imgsrc="./assets/images/other/dummy.png"
+        imgalt="dummyt image"
+        pretitle="Pre-title"
+        newstitle="Text example with 3 lines, oh yes! I say 3 lines, can you believe it? Thats me!"
+        linkurl="http://www.google.com"
+        authoravatarsrc="./assets/images/avatars/gaston-milano.png"
+        authorname="Gastón Milano"
+        date="2023-02-07"
+      >
+      </gwds-good-news>
+    </gwds-good-news-section>
+
+    <gwds-good-news-section
+      maintitle="Text example with 3 lines, oh yes! I say 3 lines, can you believe it? Thats me!"
+      linklabel="Ver todo"
+      linkurl="http://www.google.com"
+      loadmorelabel="Load More"
+      layout="7"
+      bgcolor="dark-900"
+    >
+      <gwds-good-news
+        taglabel="tag text"
+        imgsrc="./assets/images/other/dummy.png"
+        imgalt="dummyt image"
+        pretitle="Pre-title"
+        newstitle="Text example with 3 lines, oh yes! I say 3 lines, can you believe it? Thats me!"
+        linkurl="http://www.google.com"
+        authoravatarsrc="./assets/images/avatars/gaston-milano.png"
+        authorname="Gastón Milano"
+        date="2023-02-07"
+      >
+      </gwds-good-news>
+      <gwds-good-news
+        taglabel="tag text"
+        imgsrc="./assets/images/other/dummy.png"
+        imgalt="dummyt image"
+        pretitle="Pre-title"
+        newstitle="Text example with 3 lines, oh yes! I say 3 lines, can you believe it? Thats me!"
+        linkurl="http://www.google.com"
+        authoravatarsrc="./assets/images/avatars/gaston-milano.png"
+        authorname="Gastón Milano"
+        date="2023-02-07"
+      >
+      </gwds-good-news>
+      <gwds-good-news
+        taglabel="tag text"
+        imgsrc="./assets/images/other/dummy.png"
+        imgalt="dummyt image"
+        pretitle="Pre-title"
+        newstitle="Text example with 3 lines, oh yes! I say 3 lines, can you believe it? Thats me!"
+        linkurl="http://www.google.com"
+        authoravatarsrc="./assets/images/avatars/gaston-milano.png"
+        authorname="Gastón Milano"
+        date="2023-02-07"
+      >
+      </gwds-good-news>
+    </gwds-good-news-section>
+
+    <script>
+      const description =
+        "With the new version, **GeneXus 18**, it is possible to create new and colossal digital ecosystems, integrate with these in an outsourced way to speed up your solution and build Scalable Mission Critical Applications in a safe, fast and automatic way.";
+      const goodNews = document.querySelectorAll("gwds-good-news");
+      const goodNewsSection = document.querySelectorAll(
+        "gwds-good-news-section"
+      );
+      goodNews.forEach((goodNews, i) => {
+        goodNews.setAttribute("description", description);
+      });
+      goodNewsSection.forEach((goodNewsSection, i) => {
+        goodNewsSection.setAttribute("description", description);
+      });
+    </script>
+  </body>
+</html>

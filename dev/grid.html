@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Grid</title>
+    <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="../node_modules/lit/polyfill-support.js"></script>
+    <link rel="stylesheet" href="../src/styles/styles.css" />
+    <script type="module" src="../components/grid/gwds-grid.js"></script>
+    <script
+      type="module"
+      src="../components/component-title/gwds-component-title.js"
+    ></script>
+    <style>
+      .block {
+        padding: 40px;
+        background-color: rgb(212, 220, 223);
+        border-radius: 10px;
+      }
+      h2 {
+        margin-top: 60px;
+      }
+      .container {
+        margin-bottom: 64px;
+      }
+    </style>
+  </head>
+  <body>
+    <gwds-component-title label="gwds-grid properties" props>
+      perrow: '2' | '3' | '4' | '6' = '3';
+    </gwds-component-title>
+    <div class="container">
+      <h2>2</h2>
+      <gwds-grid perrow="2"
+        ><div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+      </gwds-grid>
+
+      <h2>3</h2>
+      <gwds-grid perrow="3"
+        ><div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+      </gwds-grid>
+
+      <h2>4</h2>
+      <gwds-grid perrow="4"
+        ><div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+      </gwds-grid>
+
+      <h2>6</h2>
+      <gwds-grid perrow="6"
+        ><div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+      </gwds-grid>
+    </div>
+    <gwds-component-title
+      label="Built with Lit"
+      imgsrc="./assets/images/logos/lit.svg"
+      center
+      noarrow
+    ></gwds-component-title>
+  </body>
+</html>

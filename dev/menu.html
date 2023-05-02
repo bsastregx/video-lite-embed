@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Menu</title>
+    <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="../node_modules/lit/polyfill-support.js"></script>
+    <script type="module" src="../components/menu/gwds-menu.js"></script>
+    <script
+      type="module"
+      src="../components/component-title/gwds-component-title.js"
+    ></script>
+    <link rel="stylesheet" href="../src/styles/styles.css" />
+    <style>
+      :root {
+        --gwds-title-height: 49px;
+      }
+      gwds-component-title {
+        z-index: 99;
+        position: fixed;
+        width: 100%;
+      }
+      gwds-menu {
+        top: var(--gwds-title-height);
+      }
+    </style>
+  </head>
+  <body>
+    <gwds-component-title label="gwds-menu properties" props>
+      bgColor: string = 'white' <br />
+      noShadow: boolean = false <br />
+      logoSrc: string | undefined = undefined <br />
+      logoAlt: string = 'genexus by globant logo' <br />
+    </gwds-component-title>
+    <gwds-menu
+      logosrc="./assets/images/logos/genexus.svg"
+      openheight="calc(100% - var(--gwds-title-height))"
+    >
+      <!-- Products -->
+      <gwds-menu-item label="Products">
+        <gwds-menu-heading
+          maintitle="GeneXus"
+          linkurl="www.google.com"
+          description="The Power of Doing, powered by Artificial Intelligence that creates
+      and evolves apps in the most efficient way: Automatically."
+        >
+        </gwds-menu-heading>
+        <gwds-menu-link url="http://www.google.com" highlighted
+          >The Smartest Low-Code Development Platform</gwds-menu-link
+        >
+        <gwds-menu-list grid
+          ><gwds-menu-link
+            url="http://www.google.com"
+            description="
+        GeneXus™ Business Process Management Suite."
+            >GeneXus BPM Suite</gwds-menu-link
+          >
+          <gwds-menu-link
+            url="http://www.google.com"
+            description="
+        Team collaboration & Solution Versioning for GeneXus apps"
+            >GeneXus Server™</gwds-menu-link
+          >
+          <gwds-menu-link
+            url="http://www.google.com"
+            description="
+        Code generators that write code as well as a human developer for any platform."
+            >Generators</gwds-menu-link
+          >
+          <gwds-menu-link
+            url="http://www.google.com"
+            description="
+        Automatic Dashboards, Reporting and Intelligence for your apps."
+            >GeneXus Query™</gwds-menu-link
+          >
+          <gwds-menu-link
+            url="http://www.google.com"
+            description="
+        Define and run automated UI, Unit and Regression Testing in GeneXus."
+            >GXtest™</gwds-menu-link
+          ></gwds-menu-list
+        >
+        <gwds-menu-link url="http://www.google.com" highlighted
+          >Meet the Whole Suite</gwds-menu-link
+        >
+
+        <!-- ASIDE -->
+        <gwds-menu-heading maintitle="Plans" slot="aside"> </gwds-menu-heading>
+
+        <gwds-menu-list label="Starter" slot="aside">
+          <gwds-menu-link url="http://www.google.com"
+            >GeneXus Trial</gwds-menu-link
+          >
+          <gwds-menu-link url="http://www.google.com"
+            >GeneXus for Students</gwds-menu-link
+          >
+          <gwds-menu-link url="http://www.google.com"
+            >GeneXus for Startups</gwds-menu-link
+          >
+        </gwds-menu-list>
+
+        <gwds-menu-list label="Pro" slot="aside">
+          <gwds-menu-link url="http://www.google.com"
+            >GeneXus for ISV</gwds-menu-link
+          >
+          <gwds-menu-link url="http://www.google.com"
+            >GeneXus for Enterprise</gwds-menu-link
+          >
+          <gwds-menu-link url="http://www.google.com"
+            >GeneXus for SAP Systems</gwds-menu-link
+          >
+        </gwds-menu-list>
+
+        <gwds-menu-link url="http://www.google.com" highlighted slot="aside"
+          >Compare Plans</gwds-menu-link
+        >
+
+        <gwds-menu-link url="http://www.google.com" highlighted slot="aside"
+          >ROI Calculator</gwds-menu-link
+        >
+      </gwds-menu-item>
+
+      <!-- Ecosystem -->
+      <gwds-menu-item label="Ecosystem" grid>
+        <gwds-menu-list label="Our Company">
+          <gwds-menu-link url="http://www.google.com">About us</gwds-menu-link>
+          <gwds-menu-link url="http://www.google.com"
+            >Whitepapers</gwds-menu-link
+          >
+          <gwds-menu-link url="http://www.google.com">News</gwds-menu-link>
+          <gwds-menu-link url="http://www.google.com">Blog</gwds-menu-link>
+          <gwds-menu-link url="http://www.google.com"
+            >Work with us</gwds-menu-link
+          >
+          <gwds-menu-link url="http://www.google.com"
+            >Contact us</gwds-menu-link
+          >
+        </gwds-menu-list>
+        <gwds-menu-list label="Our Partners">
+          <gwds-menu-link url="http://www.google.com"
+            >GeneXus Distributors</gwds-menu-link
+          >
+          <gwds-menu-link url="http://www.google.com"
+            >Solution Partners</gwds-menu-link
+          >
+          <gwds-menu-link url="http://www.google.com"
+            >Academic Partners</gwds-menu-link
+          >
+          <gwds-menu-link url="http://www.google.com"
+            >Solutions Catalog</gwds-menu-link
+          >
+          <gwds-menu-link url="http://www.google.com"
+            >Become a Partner</gwds-menu-link
+          >
+        </gwds-menu-list>
+        <gwds-menu-list label="Our Clients">
+          <gwds-menu-link url="http://www.google.com"
+            >Success Stories</gwds-menu-link
+          >
+        </gwds-menu-list>
+        <gwds-menu-list label="Our Company">
+          <gwds-menu-link url="http://www.google.com"
+            >GeneXus Meetings</gwds-menu-link
+          >
+          <gwds-menu-link url="http://www.google.com">Webinars</gwds-menu-link>
+          <gwds-menu-link url="http://www.google.com"
+            >GeneXus Marketplace</gwds-menu-link
+          >
+          <gwds-menu-link url="http://www.google.com"
+            >Community Resources</gwds-menu-link
+          >
+          <gwds-menu-link url="http://www.google.com"
+            >Jobs in the Community</gwds-menu-link
+          >
+          <gwds-menu-link url="http://www.google.com"
+            >Talent for Hire</gwds-menu-link
+          >
+        </gwds-menu-list>
+      </gwds-menu-item>
+
+      <!-- Developers -->
+      <gwds-menu-item label="Developers" grid>
+        <gwds-menu-list label="Join">
+          <gwds-menu-link url="http://www.google.com"
+            >First Steps</gwds-menu-link
+          >
+          <gwds-menu-link url="http://www.google.com"
+            >Create a GeneXus Account</gwds-menu-link
+          >
+          <gwds-menu-link url="http://www.google.com">Login</gwds-menu-link>
+          <gwds-menu-link url="http://www.google.com"
+            >Recover Password</gwds-menu-link
+          >
+        </gwds-menu-list>
+
+        <gwds-menu-list label="Learn">
+          <gwds-menu-link url="http://www.google.com"
+            >Online Courses</gwds-menu-link
+          >
+          <gwds-menu-link url="http://www.google.com"
+            >Documentation</gwds-menu-link
+          >
+          <gwds-menu-link url="http://www.google.com"
+            >Whitepapers</gwds-menu-link
+          >
+          <gwds-menu-link url="http://www.google.com"
+            >GeneXus FAQ</gwds-menu-link
+          >
+        </gwds-menu-list>
+
+        <gwds-menu-list label="Create">
+          <gwds-menu-link url="http://www.google.com"
+            >Developer Tools</gwds-menu-link
+          >
+          <gwds-menu-link url="http://www.google.com"
+            >Download Center</gwds-menu-link
+          >
+          <gwds-menu-link url="http://www.google.com">My Apps</gwds-menu-link>
+        </gwds-menu-list>
+
+        <gwds-menu-list label="Extend">
+          <gwds-menu-link url="http://www.google.com"
+            >Create an Extension</gwds-menu-link
+          >
+          <gwds-menu-link url="http://www.google.com"
+            >Create a Pattern</gwds-menu-link
+          >
+          <gwds-menu-link url="http://www.google.com"
+            >Create a User Control</gwds-menu-link
+          >
+          <gwds-menu-link url="http://www.google.com"
+            >Create a Design System</gwds-menu-link
+          >
+          <gwds-menu-link url="http://www.google.com"
+            >Publish on Marketplace</gwds-menu-link
+          >
+          <gwds-menu-link url="http://www.google.com"
+            >Become a Partner</gwds-menu-link
+          >
+        </gwds-menu-list>
+      </gwds-menu-item>
+
+      <!-- Training -->
+      <gwds-menu-item
+        label="Training"
+        linkurl="https://www.google.com"
+      ></gwds-menu-item>
+
+      <!-- Pricing -->
+      <gwds-menu-item
+        label="Pricing"
+        linkurl="https://www.google.com"
+      ></gwds-menu-item>
+
+      <!-- Help -->
+      <gwds-menu-item label="Help" grid>
+        <gwds-menu-list label="Helpful Links">
+          <gwds-menu-link url="http://www.google.com"
+            >First Steps</gwds-menu-link
+          >
+          <gwds-menu-link url="http://www.google.com">Wiki</gwds-menu-link>
+          <gwds-menu-link url="http://www.google.com">Training</gwds-menu-link>
+        </gwds-menu-list>
+
+        <gwds-menu-list label="Get Help">
+          <gwds-menu-link url="http://www.google.com">Search</gwds-menu-link>
+          <gwds-menu-link url="http://www.google.com">Support</gwds-menu-link>
+          <gwds-menu-link url="http://www.google.com"
+            >Stackoverflow</gwds-menu-link
+          >
+          <gwds-menu-link url="http://www.google.com">Forum</gwds-menu-link>
+          <gwds-menu-link url="http://www.google.com"
+            >Contact Us</gwds-menu-link
+          >
+        </gwds-menu-list>
+      </gwds-menu-item>
+
+      <!-- Log in -->
+      <gwds-menu-item
+        label="Log in"
+        linkurl="https://www.google.com"
+      ></gwds-menu-item>
+    </gwds-menu>
+  </body>
+</html>
